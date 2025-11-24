@@ -1,5 +1,5 @@
 body{
-    background-color:white;
+   background: linear-gradient(to bottom, #ffffff, #e8e6ff);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -9,8 +9,9 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 12px 24px;
-    background-color: #ffffff;
+    background-color: white;
     width: 100%;
+    
 }
 
 .logo img{
@@ -88,12 +89,22 @@ body{
 }
 .Schedule h1{
      padding: 10px 40px;
+     border-left: 6px solid indigo;
 }
 .rezults p{
     font-size: 20px;
     color: black;
 }
-
+.tabela-champ{
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 20px 40px;
+    background: #f4f1ff;
+    margin: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 .tabela{
    
     width: 50%;
@@ -103,6 +114,7 @@ body{
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
+
     
 }
 .tabela th{
@@ -128,5 +140,58 @@ body{
     border-bottom: none;
 }
 #tab h2, #tab table{
-    margin-left: 40px;
+    margin-left: 80px;
 }
+.leaders img{
+    width: 370px;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+
+} 
+.footer{
+    background-color: white;
+    padding: 0;
+    
+}
+.sponsors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    
+}
+.sponsors img{
+    width: 650px;
+    height: 60px;
+}
+.footer-row-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 20px 40px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+.footer-text{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #555;
+    font-size: 14px;
+    gap: 10px;
+}
+.logo-f img{
+    width: 60px;
+    height: auto;
+    margin-left: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-list li{
+    color: #555;
+    font-size: 14px;
+}
+
