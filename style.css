@@ -97,17 +97,20 @@ body{
 }
 .tabela-champ{
     display: flex;
-    gap: 60px;
+    gap: 100px;
     align-items: flex-start;
+    justify-content: center;
     padding: 20px 40px;
     background: #f4f1ff;
     margin: 40px;
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+   
 }
 .tabela{
-   
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     background: #f7f7fb; 
     font-family: Arial, sans-serif;
@@ -139,11 +142,10 @@ body{
 .tabela tr:last-child td {
     border-bottom: none;
 }
-#tab h2, #tab table{
-    margin-left: 80px;
-}
+
 .leaders img{
-    width: 370px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     max-height: 600px;
     object-fit: cover;
