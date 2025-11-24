@@ -1,5 +1,5 @@
 body{
-    background-color:lavender;
+    background-color:white;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -62,4 +62,71 @@ body{
     top: 47%;
     left: 1%;
     color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width:none;
+}
+.row::-webkit-scrollbar {
+   height: 0;
+}
+.rezults{
+    text-align: center;
+    border: 1px solid indigo;
+}
+.rezults img{
+    width: 350px;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+.Schedule h1{
+     padding: 10px 40px;
+}
+.rezults p{
+    font-size: 20px;
+    color: black;
+}
+
+.tabela{
+   
+    width: 50%;
+    text-align: center;
+    background: #f7f7fb; 
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.tabela th{
+    background: indigo;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+.tabela tr:nth-child(2) th {
+    background: #4b0082dd;  
+    font-weight: normal;
+}
+.tabela td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+.tabela td:first-child {
+    font-weight: bold;
+    color: indigo;
+}
+.tabela tr:last-child td {
+    border-bottom: none;
+}
+#tab h2, #tab table{
+    margin-left: 40px;
 }
