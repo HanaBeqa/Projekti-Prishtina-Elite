@@ -1,0 +1,86 @@
+body{
+   background: linear-gradient(to bottom, #ffffff, #e8e6ff);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+section {
+    margin-bottom: 20px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid indigo;
+    
+}
+
+.logo img{
+    width: 80px;
+    height: auto;
+    margin-left: 16px;
+}
+
+.list{
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.list a{
+    text-decoration: none;
+    font-size: 18px;
+    color: indigo; 
+    padding: 8px 14px;
+    border-radius: 6px;
+    
+    
+}
+
+.list a:hover,
+.list a:focus{
+    background-color: indigo;
+    color: #ffffff;
+}
+
+.players-foto {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.players-foto img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.Container-players {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width:none;
+    
+}
+.Container-players::-webkit-scrollbar {
+    height: 0;
+}
+.players-foto{
+    border:1px solid indigo;
+}
+.titulli-players{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
