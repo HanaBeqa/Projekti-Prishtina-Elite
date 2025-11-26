@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
 }
 section {
     margin-bottom: 20px;
@@ -122,4 +123,20 @@ section {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+.Container-coaches{
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.titulli-coaches{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid indigo;
+    margin-left: 200px;
+    max-width: 900px;
+    
 }
