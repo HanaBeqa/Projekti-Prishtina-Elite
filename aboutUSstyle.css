@@ -144,7 +144,7 @@ section {
 
 .container-news{
     display: flex;
-    gap: 25px;
+    gap: 20px;
     padding: 0 20px;
     flex-wrap: nowrap;
     align-items:flex-start;
@@ -152,7 +152,6 @@ section {
 }
 .news{
     background: #f4f1ff;
-    padding: 20px;
     border-radius: 10px;
     width: 350px;
     height: 320px;
@@ -160,7 +159,7 @@ section {
 }
 
 .news iframe{
-   width: 300px;
+   width: 290px;
    height: 200px;
 }
 .news p:nth-child(2) {
