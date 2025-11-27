@@ -223,3 +223,50 @@ section {
     margin: 6px 0;
     font-size: 16px;
 }
+
+.footer{
+    background-color: white;
+    padding: 0;
+    border-top: 1px solid indigo
+    
+}
+.sponsors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    
+}
+.sponsors img{
+    width: 650px;
+    height: 60px;
+}
+.footer-row-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 20px 40px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    margin-bottom:0;
+}
+.footer-text{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #555;
+    font-size: 14px;
+    gap: 10px;
+}
+.logo-f img{
+    width: 60px;
+    height: auto;
+    margin-left: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-list li{
+    color: #555;
+    font-size: 14px;
+}
