@@ -51,6 +51,77 @@ section {
 }
 
 
+.form-regjistrohu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    background: #f7f7fb;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 40px auto;
+     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.form-regjistrohu img{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.form-regjistrohu form{
+    background: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    width: 360px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+.form-regjistrohu h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #444;
+    text-align: center;
+}
+
+.form-regjistrohu label {
+    font-weight: 600;
+    color: #333;
+}
+.form-regjistrohu input,
+.form-regjistrohu select {
+    width: 100%;
+    padding: 10px 12px;
+    margin: 8px 0 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+.form-regjistrohu .radio-group {
+    display:flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-regjistrohu button {
+    width: 100%;
+    padding: 12px;
+    background: indigo;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-regjistrohu button:hover {
+    background:  #3B0068;
+}
+
+.contact-section{
+    border : 2px solid indigo;
+}
 
 
 
