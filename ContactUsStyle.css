@@ -174,12 +174,62 @@ section {
     height:35px;
 }
 
-
-.contact-section{
-    border : 2px solid indigo;
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    margin: 20px auto;
 }
 
+.form-container h2 {
+    text-align: center;
+    color: indigo;
+}
 
+form .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+ .row input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid indigo;
+    outline: none;
+    font-size: 15px;
+    background: #fafaff;
+}
+
+.form-container textarea {
+    resize: none;
+    height: 120px;
+    width: 95%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid indigo;
+    outline: none;
+    font-size: 15px;
+    background: #fafaff;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: indigo;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background: #3d0070;
+}
 
 
 
