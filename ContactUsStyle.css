@@ -50,6 +50,15 @@ section {
     color: #ffffff;
 }
 
+.banner img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
 
 .form-regjistrohu{
     display: flex;
@@ -59,12 +68,12 @@ section {
     padding: 40px;
     background: #f7f7fb;
     border-radius: 15px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 .form-regjistrohu img{
-    width: 400px;
+    width: 500px;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -74,6 +83,7 @@ section {
     padding: 30px 40px;
     border-radius: 15px;
     width: 360px;
+    height: auto;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 .form-regjistrohu h2 {
@@ -87,7 +97,7 @@ section {
     font-weight: 600;
     color: #333;
 }
-.form-regjistrohu input,
+.form-regjistrohu .input,
 .form-regjistrohu select {
     width: 100%;
     padding: 10px 12px;
@@ -96,11 +106,10 @@ section {
     border-radius: 8px;
     font-size: 15px;
 }
-.form-regjistrohu .radio-group {
-    display:flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: flex-start;
+.form-regjistrohu .radio {
+    width: 50px;
+    margin: 4px 0 18px;
+    padding: 10px 12px;
 }
 
 .form-regjistrohu button {
