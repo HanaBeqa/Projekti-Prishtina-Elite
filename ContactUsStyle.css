@@ -180,12 +180,13 @@ section {
 
 .format-fund{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     display: flex;
     justify-content: center;
     align-items:center;
-    margin: 40px auto;
-    gap: 40px;
+    margin: 50px auto;
+    gap: 30px;
+   
 }
 
 .form-container {
