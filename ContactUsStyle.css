@@ -111,6 +111,10 @@ section {
     margin: 4px 0 18px;
     padding: 10px 12px;
 }
+.form-regjistrohu label.gjinia{
+    font-weight: 500; 
+}
+
 
 .form-regjistrohu button {
     width: 100%;
@@ -127,6 +131,49 @@ section {
 .form-regjistrohu button:hover {
     background:  #3B0068;
 }
+
+.merch h1{
+    text-align: center;
+}
+.jerseys{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    align-items: center;
+}
+.jersey img{
+    width: 400px;
+    height: auto;
+}
+.forma-f {
+    border: 1px solid indigo;
+    width:300px;
+    height:30px;
+    border-radius: 3px;
+    text-align: center;
+}
+.forma2 select{
+    border: 1px solid indigo;
+    width:310px;
+    height:35px;
+    border-radius: 3px;
+    text-align: center;
+}
+.radio {
+    margin-top: 10px;
+}
+.forma2 button {
+    margin-top: 15px;
+    background-color: indigo;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer; 
+    width:310px;
+    height:35px;
+}
+
 
 .contact-section{
     border : 2px solid indigo;
