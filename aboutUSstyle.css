@@ -111,6 +111,7 @@ section {
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width:none;
+    margin: 0 40px 0 40px;
     
 }
 .Container-players::-webkit-scrollbar {
