@@ -246,6 +246,12 @@ form .row {
 .form-container button:hover {
     background: #3d0070;
 }
+
+.form-container a{
+    text-decoration: none;
+    color: white;
+}
+
 .bileta{
     background: white;
     padding: 30px;
