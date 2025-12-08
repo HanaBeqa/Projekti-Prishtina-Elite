@@ -25,14 +25,14 @@
 
     <section class="form-regjistrohu">
         <img src="foto_form.jpeg" alt="foto ekipore">
-        <form action="Register.html">
+        <form action="Register.html" onsubmit="return validateRegistration()">
             <h2>Register in our Voleyball schools</h2>
             <label for="fullName">Full Name:</label><br>
             <input type="text" id="fullName" name="fullName" class="input"><br>
             <label for="parentName">Parent Name:</label><br>
             <input type="text" id="parentName" name="parentName" class="input"><br>
             <label for="age">Age:</label><br>
-            <input type="number" id="age" name="age" class="input" ><br>
+            <input type="number" id="regAge" name="age" class="input"><br>
             <label for="gender">Gender:</label><br><br>
             <input type="radio" id="male" name="choice" class="radio">
             <label  class="gjinia" for="male">Male</label><br>
@@ -47,9 +47,9 @@
                 <option value="school5">Mehmet Xhevori</option>
             </select><br>
             <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" class="input"><br>
+            <input type="email" id="regEmail" name="email" class="input"><br>
             <label for="phone">Phone Number:</label><br>
-            <input type="tel" id="phone" name="phone" class="input" ><br>
+            <input type="tel" id="regPhone" name="phone" class="input" ><br>
             <button type="submit">Register</button>
 
         </form>
@@ -65,11 +65,11 @@
     </div>
 
 <div class="forma2">
-    <form action="Merch.html">
+    <form action="Merch.html" onsubmit="return validateMerch()">
         
-        <input class="forma-f" type="text" id="name" name="name" placeholder="Full Name"><br><br>
-        <input class="forma-f" type="email" id="email" name="email" placeholder="Email"><br><br>
-        <input class="forma-f" type="tel" id="phone" name="phone" placeholder="Phone Number"><br><br>
+        <input class="forma-f" type="text" id="merchName" name="name" placeholder="Full Name"><br><br>
+        <input class="forma-f" type="email" id="merchEmail" name="email" placeholder="Email"><br><br>
+        <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
         <select  id="jersey" name="jersey" placeholder="Select Jersey">
             <option value="Select Jersey">Select Jersey</option>
             <option value="home">Home Jersey - 35€</option>
@@ -102,18 +102,18 @@
 <div class="form-container">
     <h2>Get in Touch</h2>
 
-    <form action="thankYou.html">
+    <form action="thankYou.html" onsubmit="return validateContactForm()">
         <div class="row">
-            <input type="text" placeholder="Full Name" >
-            <input type="email" placeholder="Email">
+            <input type="text" id="contactName" placeholder="Full Name" >
+            <input type="email" id="contactEmail" placeholder="Email">
         </div>
 
         <div class="row">
-            <input type="text" placeholder="Phone Number">
-            <input type="text" placeholder="Subject">
+           <input type="text" id="contactPhone" placeholder="Phone Number">
+           <input type="text" id="contactSubject" placeholder="Subject">
         </div>
 
-        <textarea placeholder="Your Message"></textarea>
+        <textarea id="contactMessage" placeholder="Your Message"></textarea><br><br>
 
         <button type="submit">Message</button>
     </form>
@@ -121,20 +121,20 @@
 
 <div class="bileta">
     <h2>Buy Tickets</h2>
-<form action="tickets.html">
+<form action="tickets.html" onsubmit="return validateTickets()">
     <label>Full Name</label><br>
-    <input type="text" placeholder="Enter your name"><br><br>
+    <input type="text" id="ticketName" placeholder="Enter your name"><br><br>
 
     <label>Choose Team</label><br>
-    <select>
+    <select id="ticketTeam">
         <option>Team A</option>
         <option>Team B</option>
     </select><br><br>
 
     <label>Ticket Quantity</label><br>
-    <input type="number" min="1" max="10" value="1"><br><br>
+    <input type="number" id="ticketQuantity" min="1" max="10" value="1"><br><br>
     <label>Seat Type</label><br>
-    <select>
+    <select id="ticketSeat">
         <option>Regular</option>
         <option>VIP</option>
         <option>Premium</option>
@@ -166,5 +166,113 @@
         </div>
         </section>
          </footer>
+
+<script>
+
+function checkField(field) {
+    if (!field || field.value.trim() === "") {
+        field.style.border = "2px solid red";
+        return false;
+    } else {
+        field.style.border = "2px solid green";
+        return true;
+    }
+}
+
+
+function validateRegistration() {
+    var fullName = document.getElementById("fullName");
+    var parentName = document.getElementById("parentName");
+    var age = document.getElementById("regAge");
+    var email = document.getElementById("regEmail");
+    var phone = document.getElementById("regPhone");
+
+    var valid =
+        checkField(fullName) &
+        checkField(parentName) &
+        checkField(age) &
+        checkField(email) &
+        checkField(phone);
+
+    if (!valid) {
+        alert("Please fill all registration fields!");
+        return false;
+    }
+    return true;
+}
+
+
+function validateMerch() {
+    var name = document.getElementById("merchName");
+    var email = document.getElementById("merchEmail");
+    var phone = document.getElementById("merchPhone");
+    var jersey = document.getElementById("jersey");
+    var size = document.querySelector("input[name='size']:checked");
+
+    var valid = checkField(name) & checkField(email) & checkField(phone);
+
+    if (jersey.value === "Select Jersey") {
+        jersey.style.border = "2px solid red";
+        valid = false;
+    } else {
+        jersey.style.border = "2px solid green";
+    }
+
+    if (!valid) {
+        alert("Please complete all merch fields!");
+        return false;
+    }
+    return true;
+}
+
+
+function validateContactForm() {
+    var name = document.getElementById("contactName");
+    var email = document.getElementById("contactEmail");
+    var phone = document.getElementById("contactPhone");
+    var subject = document.getElementById("contactSubject");
+    var message = document.getElementById("contactMessage");
+
+    var valid =
+        checkField(name) &
+        checkField(email) &
+        checkField(phone) &
+        checkField(subject) &
+        checkField(message);
+
+    if (!valid) {
+        alert("Please fill in all contact fields!");
+        return false;
+    }
+    return true;
+}
+
+function validateTickets() {
+    var name = document.getElementById("ticketName");
+    var team = document.getElementById("ticketTeam");
+    var quantity = document.getElementById("ticketQuantity");
+    var seat = document.getElementById("ticketSeat");
+
+    var valid = checkField(name) & checkField(team) & checkField(quantity) & checkField(seat);
+
+    if (quantity.value < 1 || quantity.value > 10) {
+        quantity.style.border = "2px solid red";
+        alert("Ticket quantity must be between 1 and 10.");
+        return false;
+    } else {
+        quantity.style.border = "2px solid green";
+    }
+
+    if (!valid) {
+        alert("Please complete all ticket fields!");
+        return false;
+    }
+    return true;
+}
+</script>
+
+
+
+
 </body>
 </html>
