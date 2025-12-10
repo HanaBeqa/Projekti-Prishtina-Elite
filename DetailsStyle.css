@@ -4,7 +4,6 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
 }
 
 h1, h2, h3 {
@@ -23,7 +22,6 @@ section {
     background-color: white;
     width: 100%;
     border-bottom: 1px solid indigo;
-    
 }
 
 .logo img{
@@ -47,8 +45,6 @@ section {
     color: indigo; 
     padding: 8px 14px;
     border-radius: 6px;
-    
-    
 }
 
 .list a:hover,
@@ -67,7 +63,6 @@ section {
     justify-content: center;
     gap: 40px;
     margin-bottom: 40px;
-    
 }
 .rosteri img{
     width: 500px;
@@ -118,10 +113,12 @@ section {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .posteri img{
     width: 300px;
     height: auto;
 }
+
 .posters-container{
     margin: 0 40px 0 40px;
     display: flex;
@@ -130,10 +127,12 @@ section {
     margin-bottom: 40px;
     overflow-x: scroll;
 }
+
 .vlerat h1{
     text-align: center;
     margin-bottom: 20px;
 }
+
 .values {
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +149,6 @@ section {
     padding: 16px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    
 }
 
 .value:hover {
@@ -193,7 +191,6 @@ section {
     color: #111;
 }
 
-/* Different background colors for each day */
 .day1 {
     background-color: #e0f7fa;
 }
