@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="SignUpStyle.css">
+    <link rel="stylesheet" href="SignInStyle.css">
 </head>
 <body>
     <nav class="navbar">
@@ -21,34 +21,96 @@
         </ul>
     </nav>
 
-    <div class="auth-box signup-box">
+    <div class="auth-box">
 
-        <h2>Create Your Account</h2>
+    <div class="switch">
+        <button id="loginBtn" type="button">Log In</button>
+        <button class="active" type="button">Sign Up</button>
+    </div>
 
-        <form class="form register">
-            <div class="role-selection">
-                <label>Select Role:</label>
-                <select>
-                    <option value="user">User</option>
-                    <option value="admin">Administrator</option>
-                </select>
-            </div>
+    <form class="form login">
+        <div class="role-selection">
+            <label>Select Role:</label>
+            <select>
+                <option value="user">User</option>
+                <option value="admin">Administrator</option>
+            </select>
+        </div>
 
+        <div class="emailPassword">
             <label>Name</label>
-            <input type="text" placeholder="Enter your name">
+            <input type="text" id="name">
 
             <label>Email</label>
-            <input type="email" placeholder="Enter your email" >
+            <input type="email" id="email">
 
             <label>Password</label>
-            <input type="password" placeholder="Enter your password">
+            <input type="password" id="password">
 
             <label>Confirm Password</label>
-            <input type="password" placeholder="Confirm your password">
+            <input type="password" id="confirmPassword">
+        </div>
+        <button class="submit" id="submit">Sign Up</button>
+    </form>
 
-            <button class="submit">Create Account</button>
-        </form>
+    
+</div>
+<script>
+ document.getElementById("loginBtn").onclick = function () {
+        window.location.href = "SignIn.html";
+    };
 
-    </div>
+    
+    document.getElementById("submit").onclick = function (event) {
+        event.preventDefault(); 
+
+       
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        var confirmPassword = document.getElementById("confirmPassword");
+
+        var valid = true;
+
+       
+        if (name.value === "") {
+            name.style.border = "2px solid red";
+            name.placeholder = "Please fill this field";
+            valid = false;
+        } else {
+            name.style.border = "";
+        }
+
+        
+        if (email.value === "") {
+            email.style.border = "2px solid red";
+            email.placeholder = "Please fill this field";
+            valid = false;
+        } else {
+            email.style.border = "";
+        }
+
+        
+        if (password.value === "") {
+            password.style.border = "2px solid red";
+            password.placeholder = "Please fill this field";
+            valid = false;
+        } else {
+            password.style.border = "";
+        }
+
+        if (confirmPassword.value === "") {
+            confirmPassword.style.border = "2px solid red";
+            confirmPassword.placeholder = "Please fill this field";
+            valid = false;
+        } else {
+            confirmPassword.style.border = "";
+        }
+
+        if(valid){
+            alert("Sign up successful!");
+        }
+    };
+</script>
 </body>
 </html>
