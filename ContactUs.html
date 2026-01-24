@@ -175,29 +175,47 @@ function checkField(field) {
     if (!field || field.value.trim() === "") {
         field.style.border = "2px solid red";
         return false;
-    } else {
-        field.style.border = "2px solid green";
-        return true;
+    } 
+        return true;   
+}
+
+
+function checkEmail(field) {
+    let regex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    if (!field.value.trim() || !regex.test(field.value.trim())) {
+        field.style.border = "2px solid red";
+        return false;
     }
+    return true;
+}
+
+function checkPhone(field) {
+    let regex = /^[0-9+ ]{6,15}$/; 
+    if (!field.value.trim() || !regex.test(field.value.trim())) {
+        field.style.border = "2px solid red";
+        return false;
+    }
+    return true;
 }
 
 
 function validateRegistration() {
-    var fullName = document.getElementById("fullName");
-    var parentName = document.getElementById("parentName");
-    var age = document.getElementById("regAge");
-    var email = document.getElementById("regEmail");
-    var phone = document.getElementById("regPhone");
+    let fullName = document.getElementById("fullName");
+    let parentName = document.getElementById("parentName");
+    let age = document.getElementById("regAge");
+    let email = document.getElementById("regEmail");
+    let phone = document.getElementById("regPhone");
+    let valid = true;
 
-    var valid =
-        checkField(fullName) &
-        checkField(parentName) &
-        checkField(age) &
-        checkField(email) &
-        checkField(phone);
+    if (!checkField(fullName)) valid = false;
+    if (!checkField(parentName)) valid = false;
+    if (!checkField(age)) valid = false;
+
+    if (!checkEmail(email)) valid = false;
+    if (!checkPhone(phone)) valid = false;
 
     if (!valid) {
-        alert("Please fill all registration fields!");
+        alert("Please correct the highlighted fields!");
         return false;
     }
     return true;
@@ -205,23 +223,31 @@ function validateRegistration() {
 
 
 function validateMerch() {
-    var name = document.getElementById("merchName");
-    var email = document.getElementById("merchEmail");
-    var phone = document.getElementById("merchPhone");
-    var jersey = document.getElementById("jersey");
-    var size = document.querySelector("input[name='size']:checked");
+    let name = document.getElementById("merchName");
+    let email = document.getElementById("merchEmail");
+    let phone = document.getElementById("merchPhone");
+    let jersey = document.getElementById("jersey");
+    let size = document.querySelector("input[name='size']:checked");
 
-    var valid = checkField(name) & checkField(email) & checkField(phone);
+    let valid = true;
+
+    if (!checkField(name)) valid = false;
+    if (!checkEmail(email)) valid = false;
+    if (!checkPhone(phone)) valid = false;
 
     if (jersey.value === "Select Jersey") {
         jersey.style.border = "2px solid red";
         valid = false;
-    } else {
-        jersey.style.border = "2px solid green";
+    } 
+    if (!size) {
+         alert("Please complete all merch fields correctly!");
+        return false;
     }
+    return true;
+
 
     if (!valid) {
-        alert("Please complete all merch fields!");
+        alert("Please complete all merch fields correctly!");
         return false;
     }
     return true;
@@ -229,41 +255,39 @@ function validateMerch() {
 
 
 function validateContactForm() {
-    var name = document.getElementById("contactName");
-    var email = document.getElementById("contactEmail");
-    var phone = document.getElementById("contactPhone");
-    var subject = document.getElementById("contactSubject");
-    var message = document.getElementById("contactMessage");
+    let name = document.getElementById("contactName");
+    let email = document.getElementById("contactEmail");
+    let phone = document.getElementById("contactPhone");
+    let subject = document.getElementById("contactSubject");
+    let message = document.getElementById("contactMessage");
+    let valid = true;
 
-    var valid =
-        checkField(name) &
-        checkField(email) &
-        checkField(phone) &
-        checkField(subject) &
-        checkField(message);
+    if (!checkField(name)) valid = false;
+    if (!checkEmail(email)) valid = false;
+    if (!checkPhone(phone)) valid = false;
+    if (!checkField(subject)) valid = false;
+    if (!checkField(message)) valid = false;
 
     if (!valid) {
-        alert("Please fill in all contact fields!");
+        alert("Please fill in all contact fields correctly!");
         return false;
     }
     return true;
 }
 
 function validateTickets() {
-    var name = document.getElementById("ticketName");
-    var team = document.getElementById("ticketTeam");
-    var quantity = document.getElementById("ticketQuantity");
-    var seat = document.getElementById("ticketSeat");
+    let name = document.getElementById("ticketName");
+    let team = document.getElementById("ticketTeam");
+    let quantity = document.getElementById("ticketQuantity");
+    let seat = document.getElementById("ticketSeat");
 
-    var valid = checkField(name) & checkField(team) & checkField(quantity) & checkField(seat);
+    let valid = checkField(name) && checkField(team) && checkField(quantity) && checkField(seat);
 
     if (quantity.value < 1 || quantity.value > 10) {
         quantity.style.border = "2px solid red";
         alert("Ticket quantity must be between 1 and 10.");
         return false;
-    } else {
-        quantity.style.border = "2px solid green";
-    }
+    } 
 
     if (!valid) {
         alert("Please complete all ticket fields!");
