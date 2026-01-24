@@ -12,15 +12,10 @@
         <div class="logo">
             <img src="llogo.jpg" alt="Prishtina Elite logo">
         </div>
-        <ul class="list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutsUs.html">About Us</a></li>
-            <li><a href="ContactUs.html">Contact us</a></li>
-            <li><a href="Details.html">Details</a></li>
-            <li><a href="SignIn.html" >Sign In</a></li>
-        </ul>
+        <p class="shkrim">Log in to see more about Prishtina Elite !</p>
     </nav>
 
+    <div class="background-overlay">
     <div class="auth-box">
 
     <div class="switch">
@@ -29,13 +24,7 @@
     </div>
 
     <form class="form login">
-        <div class="role-selection">
-            <label>Select Role:</label>
-            <select>
-                <option value="user">User</option>
-                <option value="admin">Administrator</option>
-            </select>
-        </div>
+        
 
         <div class="emailPassword">
             <label>Name</label>
@@ -53,6 +42,10 @@
         <button class="submit" id="submit">Sign Up</button>
     </form>
 
+</div>
+<div class="foto1">
+<img  src="IMG_1210.jpeg" alt="Background Image">
+</div>
     
 </div>
 <script>
@@ -65,12 +58,12 @@
         event.preventDefault(); 
 
        
-        var name = document.getElementById("name");
-        var email = document.getElementById("email");
-        var password = document.getElementById("password");
-        var confirmPassword = document.getElementById("confirmPassword");
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let confirmPassword = document.getElementById("confirmPassword");
 
-        var valid = true;
+        let valid = true;
 
        
         if (name.value === "") {
@@ -78,37 +71,43 @@
             name.placeholder = "Please fill this field";
             valid = false;
         } else {
-            name.style.border = "";
+            name.style.border ="2px solid green";
         }
 
-        
-        if (email.value === "") {
-            email.style.border = "2px solid red";
-            email.placeholder = "Please fill this field";
-            valid = false;
-        } else {
-            email.style.border = "";
+
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    if (email.value.trim() === "" || !emailRegex.test(email.value.trim())) {
+        email.style.border = "2px solid red";
+        email.value = "";
+        email.placeholder = "Enter a valid email!";
+        valid = false;
+    } else {
+        email.style.border = "2px solid green";
+       }
+
+
+        let passwordRegex = /^.{6,}$/;
+    if (password.value.trim() === "" || !passwordRegex.test(password.value.trim())) {
+        password.style.border = "2px solid red";
+        password.value = "";
+        password.placeholder = "Password must be at least 6 characters!";
+        valid = false;
+    } else {
+        password.style.border = "2px solid green";
         }
 
-        
-        if (password.value === "") {
-            password.style.border = "2px solid red";
-            password.placeholder = "Please fill this field";
-            valid = false;
-        } else {
-            password.style.border = "";
-        }
-
-        if (confirmPassword.value === "") {
-            confirmPassword.style.border = "2px solid red";
-            confirmPassword.placeholder = "Please fill this field";
-            valid = false;
-        } else {
-            confirmPassword.style.border = "";
-        }
+    if (confirmPassword.value.trim() === "" || confirmPassword.value.trim() !== password.value.trim()) {
+        confirmPassword.style.border = "2px solid red";
+        confirmPassword.value = "";
+        confirmPassword.placeholder = "Passwords do not match!";
+        valid = false;
+    } else {
+        confirmPassword.style.border = "2px solid green";
+    }
 
         if(valid){
             alert("Sign up successful!");
+            window.location.href = "index.html";
         }
     };
 </script>

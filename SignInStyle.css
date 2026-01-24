@@ -3,11 +3,12 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-      background-color: #f2f0ff;
+    background-color:white
+    /* #f2f0ff;
     background-image:
         linear-gradient(to right, rgba(75,0,130,0.08), rgba(75,0,130,0)),
         linear-gradient(to bottom, rgba(95,25,211,0.15), rgba(255,255,255,0));
-
+    */
 }
 
 h1, h2, h3 {
@@ -36,57 +37,34 @@ section {
     margin-left: 16px;
 }
 
-.list{
+.shkrim{
+    font-size: 20px;
+    color: indigo;
+    margin: 0 50px 0 0;
+    
+}
+
+.background-overlay{
     display: flex;
-    gap: 16px;
-    list-style: none;
-    margin: 0 20px 0 0;
-    padding: 0;
-    flex-wrap: wrap;
+    justify-content:space-evenly;    
+    align-items: center;         
+    gap: 50px;
 }
 
-.list a{
-    text-decoration: none;
-    font-size: 18px;
-    color: indigo; 
-    padding: 8px 14px;
-    border-radius: 6px;
-    
-    
-}
-
-.list a:hover,
-.list a:focus{
-    background-color: indigo;
-    color: #ffffff;
-}
 .auth-box {
     background: white;
     width: 480px;
     padding: 30px; 
-    margin: 150px auto; 
     box-shadow: 0 10px 40px rgba(75,0,130,0.2); 
     border-radius: 12px;
+    background-color:white
 }
-
-.role-selection {
-    margin-bottom: 15px;
-}
-
-.role-selection label {
-    font-size: 14px;
-    color: #555;
-    display: block;
-    margin-bottom: 6px;
-}
-
-.role-selection select {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    background: #f1f1f1;
-    margin-bottom: 15px;
-    font-size: 14px;
+.foto1 img{
+    padding-top: 30px;
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+    
 }
 
 
@@ -120,6 +98,7 @@ section {
 .emailPassword {
     margin-right: 17px;
     margin-bottom: 7px;
+
 }
 
 label {
