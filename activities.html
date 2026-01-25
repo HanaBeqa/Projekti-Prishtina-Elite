@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="activitiesStyle.css">
+</head>
+<body>
+       <nav class="navbar">
+       <div class="logo">
+        <img src="llogo.jpg" alt="Prishtina Elite logo">
+     </div>
+     <ul class="list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutsUs.html">About Us</a></li>
+        <li><a href="ContactUs.html">Contact us</a></li>
+        <li><a href="Details.html">Details</a></li>
+        <li><a href="activities.html">Activities</a></li>
+     </ul>
+    </nav>
+
+    <section class="activitie1">
+            <div class="image-activitie1">
+            <button onclick="Ndrysho1(1)">&lt</button>
+            <img src="IMG_7245.jpeg" alt="training1" id="fotot1">
+             <button onclick="Ndrysho1(-1)">&gt</button>
+            </div>
+            <div class="text-activitie1">
+            <h2>Our girls shone once again in Dubrovnik, Croatia!</h2>
+            <p>A total of 5 girls out of 10 participants proudly represented the University of Prishtina in the inter-university competitions held in Dubrovnik.
+                Vesa Podujeva, Rina Murtezi, Vesa Beqa, Hana Beqa, and Loreta Zhdrella – not only key players, but true champions of sportsmanship!
+                With great dedication, they achieved 3rd place, a major success in such an important competition for the region.
+                Special thanks go to the Faculty of Sport and professors Musa Selimi and Bahri Gjinovci, who made this unforgettable experience possible for our girls.
+                We will continue to be an inseparable part of activities that contribute to the well-being of our country.</p>
+            </div>
+        </section>
+
+         <section class="activitie1">
+            <div class="image-activitie1">
+            <button onclick="Ndrysho2(1)">&lt</button>
+            <img src="kosova12.jpeg" alt="training1" id="fotot2">
+             <button onclick="Ndrysho2(-1)">&gt</button>
+            </div>
+            <div class="text-activitie1">
+            <h2>Prishtina Elite Proudly Represented in the Kosovo U21 National Team </h2>
+            <p>Our coach Kastriot Azemi and our two talented players Vesa Beqa and Merisa Slivova are part of the Kosovo U21 National Team, which is participating in the Balkan Championship being held in Tirana.
+                Today, a large number of our team members were present to support them, once again showing that Prishtina Elite is not just a club – but a big family that stands by each other every step of the way!</p>
+            </div>
+        </section>
+
+           <section class="activitie1">
+            <div class="image-activitie1">
+            <button onclick="Ndrysho3(1)">&lt</button>
+            <img src="IMG_7255.jpeg" alt="training1" id="fotot3">
+             <button onclick="Ndrysho3(-1)">&gt</button>
+            </div>
+            <div class="text-activitie1">
+            <h2>Durrës Summer Camp 2025 </h2>
+            <p>Another important chapter for our club has successfully come to an end — the summer camp in Durrës, which brought together over 130 young and very talented volleyball players!
+                This camp was more than just training — it was about organization, fun, and unforgettable experiences for every child who took part. With carefully planned activities such as games, tournaments, competitions, beach and pool activities, entertaining evenings, and countless smiles.
+                We sincerely thank every player for the discipline, dedication, and sportsmanship they demonstrated throughout the camp. A special thank you goes to the parents for their trust and continuous support.</p>
+            </div>
+        </section>
+
+         <section class="activitie1">
+            <div class="image-activitie1">
+            <button onclick="Ndrysho4(1)">&lt</button>
+            <img src="IMG_7261.jpeg" alt="training1" id="fotot4">
+             <button onclick="Ndrysho4(-1)">&gt</button>
+            </div>
+            <div class="text-activitie1">
+            <h2>Family Picnic with Prishtina Elite </h2>
+            <p>Today was a special day for everyone — a day to once again show that we are more than a club, we are a big family.
+                In an atmosphere full of games, fun, surprises, and endless smiles, our children, growing up with the club in a sporting spirit, joined families from all neighborhoods of Prishtina, creating new friendships and memories that will stay with everyone for a long time.
+                This picnic was just one of many activities we organize with love and dedication.
+                Prishtina Elite continues to be a place of opportunities for every child who wants to grow up in an educational, sporty, and healthy environment!</p>
+            </div>
+        </section>
+
+
+
+    
+
+
+
+     <footer class="footer">
+            <section class="sponsors">
+                <img src="sponsors3.png">
+                <img src="sponsor2.png">
+            </section>
+            <section class="footer-row-2">
+                <div class="footer-text">
+            <div class="logo-f">
+              <img src="llogo.jpg" alt="Prishtina Elite logo">
+             </div>
+        <p>&copy; 2025 Prishtina Elite. All rights reserved.</p>
+        </div>
+        <div class="footer-list">
+            <ul>
+                <li>Email: kvprishtinaelite@gmail.com</li>
+                <li>Phone number: 049-551-777</li>
+                <li>Location:(Prishtina, Kosovo) Shkolla "Emin Duraku"</li>
+            </ul>
+        </div>
+        </section>
+         </footer>
+
+         <script>
+        let photo1=['IMG_7245.jpeg', 'IMG_7246.jpeg', 'IMG_7247.jpeg', 'IMG_7248.jpeg', 'IMG_7249.jpeg'];
+        let index1=0;
+        function Ndrysho1(hapi1){
+            index1+=hapi1;
+            if(index1<0){
+                index1=photo1.length-1;
+            }
+            if(index1>=photo1.length){
+                index1=0;
+            }
+            document.getElementById('fotot1').src=photo1[index1];
+        }
+
+        let photo2=['kosova12.jpeg', 'IMG_5854.jpeg', 'IMG_7253.jpeg', 'IMG_5859.jpeg','IMG_7254.jpeg'];
+        let index2=0;
+        function Ndrysho2(hapi2){
+            index2+=hapi2;
+            if(index2<0){
+                index2=photo2.length-1;
+            }
+            if(index2>=photo2.length){
+                index2=0;
+            }
+            document.getElementById('fotot2').src=photo2[index2];
+        }
+
+        let photo3=['IMG_7255.jpeg', 'IMG_7258.jpeg', 'IMG_7257.jpeg', 'IMG_7259.jpeg','IMG_7256.jpeg','IMG_7260.jpeg'];
+        let index3=0;
+        function Ndrysho3(hapi3){
+            index3+=hapi3;
+            if(index3<0){
+                index3=photo3.length-1;
+            }
+            if(index3>=photo3.length){
+                index3=0;
+            }
+            document.getElementById('fotot3').src=photo3[index3];
+        }
+
+        let photo4=['IMG_7261.jpeg', 'IMG_7262.jpeg', 'IMG_7263.jpeg', 'IMG_7264.jpeg','IMG_7265.jpeg','IMG_7266.jpeg'];
+         let index4=0;
+        function Ndrysho4(hapi4){
+            index4+=hapi4;
+            if(index4<0){
+                index4=photo4.length-1;
+            }
+            if(index4>=photo4.length){
+                index4=0;
+            }
+            document.getElementById('fotot4').src=photo4[index4];
+        }
+            </script>
+
+</body>
+</html>
