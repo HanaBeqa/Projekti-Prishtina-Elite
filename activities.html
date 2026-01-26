@@ -20,6 +20,11 @@
         <li><a href="activities.html">Activities</a></li>
      </ul>
     </nav>
+    
+    <section class="titulli">
+        <h1><a href="ContactUs.html">JOIN US FOR MORE EXCITING ADVENTURES!</a></h1>
+        
+    </section>
 
     <section class="activitie1">
             <div class="image-activitie1">
@@ -76,6 +81,26 @@
                 In an atmosphere full of games, fun, surprises, and endless smiles, our children, growing up with the club in a sporting spirit, joined families from all neighborhoods of Prishtina, creating new friendships and memories that will stay with everyone for a long time.
                 This picnic was just one of many activities we organize with love and dedication.
                 Prishtina Elite continues to be a place of opportunities for every child who wants to grow up in an educational, sporty, and healthy environment!</p>
+            </div>
+        </section>
+
+        <section class="activitie1">
+            <div class="image-activitie1">
+            <button onclick="Ndrysho5(1)">&lt</button>
+            <img src="IMG_7277.jpeg" alt="training1" id="fotot5">
+             <button onclick="Ndrysho5(-1)">&gt</button>
+            </div>
+            <div class="text-activitie1">
+            <h2>Prishtina Elite makes history! </h2>
+            <p>For the first time, our club took part in an international competition and managed to be crowned runner-up, with 4 victories and only one defeat in a dramatic final against Altino Volley from Lecce, Italy.
+                Gallipoli welcomed us with excellent organization, from the opening ceremony to the very end of the tournament.
+                Gallipoli welcomed us with excellent organization, from the opening ceremony to the very end of the tournament.
+
+                On the first day, a special reception was held for our team, where gifts were exchanged and new friendly connections were formed with the participants.
+
+                Our results:
+
+                Our girls triumphed with 4 consecutive wins, securing a place in the grand final. The atmosphere was electric, with our passionate fans never stopping their support, while the Italians stood behind the home team.</p>
             </div>
         </section>
 
@@ -159,6 +184,20 @@
             }
             document.getElementById('fotot4').src=photo4[index4];
         }
+
+        let photo5=['IMG_7277.jpeg', 'IMG_7278.jpeg', 'IMG_7279.jpeg', 'IMG_7272.jpeg','IMG_7274.jpeg','IMG_7271.jpeg','IMG_7275.jpeg'];
+         let index5=0;
+        function Ndrysho5(hapi5){
+            index5+=hapi5;
+            if(index5<0){
+                index5=photo5.length-1;
+            }
+            if(index5>=photo5.length){
+                index5=0;
+            }
+            document.getElementById('fotot5').src=photo5[index5];
+        }
+
             </script>
 
 </body>

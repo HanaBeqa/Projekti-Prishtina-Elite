@@ -57,6 +57,57 @@ section {
     color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .list a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .navbar {
+        padding: 10px 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 50px;
+    }
+
+    .list a {
+        font-size: 14px; 
+        padding: 5px 8px; 
+    }
+
+    .navbar {
+        padding: 8px 12px;
+    }
+
+    .list {
+        gap: 8px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 40px;
+    }
+
+    .list a {
+        font-size: 12px; 
+        padding: 4px 6px;
+    }
+
+    .list {
+        gap: 6px; 
+    }
+}
+
 
 .titull-historia {
     display: flex; 
@@ -92,6 +143,43 @@ section {
     text-align: center;
     margin-bottom: 20px;
     
+}
+
+@media (max-width: 900px) {
+    .titull-historia {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titull-historia img {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .historia p {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .titull-historia {
+        padding: 15px;
+    }
+
+    .historia h1 {
+        font-size: 22px;
+    }
+
+    .historia p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .titull-historia img {
+        max-width: 320px;
+    }
 }
 
 
@@ -146,6 +234,47 @@ section {
     border-radius: 10px;
     max-width: 900px;    
 }
+
+@media (max-width: 768px) {
+    .Container-coaches {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .players-foto {
+        flex-direction: column;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .players-foto img {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulli-coaches h1 {
+        font-size: 22px;
+    }
+
+    .players-foto {
+        padding: 15px;
+    }
+
+    .players-foto img {
+        width: 150px;
+    }
+
+    .player-info h3 {
+        font-size: 18px;
+    }
+
+    .player-info p {
+        font-size: 14px;
+    }
+}
+
+
 .news-title{
     text-align: center;
 }
@@ -185,6 +314,53 @@ section {
     text-align: left;
    
 }
+
+@media (max-width: 1024px) {
+    .container-news {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-news {
+        gap: 25px;
+    }
+
+    .news {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
+
+    .news iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-title h1 {
+        font-size: 22px;
+    }
+
+    .news {
+        max-width: 100%;
+    }
+
+    .news iframe {
+        height: 180px;
+    }
+
+    .news p:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .news p:nth-child(3) {
+        font-size: 16px;
+    }
+}
+
 .volley-map-section {
     padding: 40px;
 }
@@ -232,6 +408,61 @@ section {
     font-size: 16px;
 }
 
+@media (max-width: 1024px) {
+    .schools-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .school-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .volley-map-section {
+        padding: 25px;
+    }
+
+    .volley-map-section h1 {
+        font-size: 28px;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 400px;
+    }
+
+    .school-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .volley-map-section {
+        padding: 15px;
+    }
+
+    .volley-map-section h1 {
+        font-size: 22px;
+    }
+
+    .map-container,
+    .map-container iframe {
+        height: 300px;
+    }
+
+    .school-card h2 {
+        font-size: 18px;
+    }
+
+    .school-card p {
+        font-size: 14px;
+    }
+}
+
+
 .footer{
     background-color: white;
     padding: 0;
@@ -277,4 +508,86 @@ section {
 .footer-list li{
     color: #555;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .sponsors img {
+        width: 500px;
+        height: 50px;
+    }
+
+    .footer-row-2 {
+        padding: 0 20px 20px 20px;
+        gap: 20px;
+    }
+
+    .logo-f img {
+        width: 50px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .footer-list li {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sponsors img {
+        width: 350px;
+        height: 40px;
+    }
+
+    .logo-f img {
+        width: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .footer-list li {
+        font-size: 12px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sponsors img {
+        width: 250px;
+        height: 30px;
+    }
+
+    .logo-f img {
+        width: 35px;
+    }
+
+    .footer-text {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .footer-list li {
+        font-size: 11px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
 }

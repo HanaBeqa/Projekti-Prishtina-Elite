@@ -57,6 +57,60 @@ section {
 }
 
 
+@media (max-width: 1024px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .list a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .navbar {
+        padding: 10px 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 50px;
+    }
+
+    .list a {
+        font-size: 14px; 
+        padding: 5px 8px; 
+    }
+
+    .navbar {
+        padding: 8px 12px;
+    }
+
+    .list {
+        gap: 8px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 40px;
+    }
+
+    .list a {
+        font-size: 12px; 
+        padding: 4px 6px;
+    }
+
+    .list {
+        gap: 6px; 
+    }
+}
+
+
+
+
 .banner{
     position: relative;
     text-align: center;
@@ -76,6 +130,45 @@ section {
     left: 1%;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .textbanner {
+        top: 45%;
+        left: 5%;
+    }
+
+    .textbanner h1 {
+        font-size: 28px;
+    }
+
+    .textbanner p {
+        font-size: 16px;
+    }
+
+    .banner img {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .textbanner {
+        top: 40%;
+        left: 5%;
+    }
+
+    .textbanner h1 {
+        font-size: 22px;
+    }
+
+    .textbanner p {
+        font-size: 14px;
+    }
+
+    .banner img {
+        max-height: 300px;
+    }
+}
+
 .row{
     display: flex;
     justify-content: space-between;
@@ -169,6 +262,57 @@ section {
 
 } 
 
+@media (max-width: 1024px) {
+    .tabela-champ {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .tabela {
+        max-width: 90%;
+        font-size: 14px;
+    }
+
+    .leaders img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tabela th,
+    .tabela td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .leaders img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabela th {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .tabela td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .tabela-champ {
+        padding: 15px 10px;
+    }
+
+    .leaders img {
+        max-height: 300px;
+    }
+}
+
+
 
 .videos-text{
     margin-top: 40px;
@@ -260,6 +404,90 @@ section {
 }
 
 
+@media (max-width: 1024px) {
+    #video1 iframe {
+        width: 500px;
+        height: 310px;
+    }
+
+    .next-video {
+        width: 350px;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .next-video iframe {
+        width: 120px;
+        height: 90px;
+    }
+
+    .video-desc p:last-child {
+        font-size: 16px;
+    }
+
+    .video-desc p:first-child {
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #video1 iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .next-video {
+        width: 90%;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .next-video iframe {
+        width: 100px;
+        height: 70px;
+    }
+
+    .video-desc p:last-child {
+        font-size: 14px;
+    }
+
+    .video-desc p:first-child {
+        font-size: 10px;
+        white-space: normal;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #video1 iframe {
+        height: 200px;
+    }
+
+    .next-video iframe {
+        width: 80px;
+        height: 60px;
+    }
+
+    .video-desc p:last-child {
+        font-size: 12px;
+    }
+
+    .video-desc p:first-child {
+        font-size: 9px;
+    }
+}
+
+
+
 .footer{
     background-color: white;
     padding: 0;
@@ -305,5 +533,88 @@ section {
 .footer-list li{
     color: #555;
     font-size: 14px;
+}
+
+
+@media (max-width: 1024px) {
+    .sponsors img {
+        width: 500px;
+        height: 50px;
+    }
+
+    .footer-row-2 {
+        padding: 0 20px 20px 20px;
+        gap: 20px;
+    }
+
+    .logo-f img {
+        width: 50px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .footer-list li {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sponsors img {
+        width: 350px;
+        height: 40px;
+    }
+
+    .logo-f img {
+        width: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .footer-list li {
+        font-size: 12px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sponsors img {
+        width: 250px;
+        height: 30px;
+    }
+
+    .logo-f img {
+        width: 35px;
+    }
+
+    .footer-text {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .footer-list li {
+        font-size: 11px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
 }
 

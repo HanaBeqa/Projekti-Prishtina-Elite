@@ -57,6 +57,57 @@ section {
     color: #ffffff;
 }
 
+@media (max-width: 1024px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .list a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .navbar {
+        padding: 10px 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 50px;
+    }
+
+    .list a {
+        font-size: 14px; 
+        padding: 5px 8px; 
+    }
+
+    .navbar {
+        padding: 8px 12px;
+    }
+
+    .list {
+        gap: 8px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 40px;
+    }
+
+    .list a {
+        font-size: 12px; 
+        padding: 4px 6px;
+    }
+
+    .list {
+        gap: 6px; 
+    }
+}
+
 .titulli h1{
     text-align: center;
     color: white;
@@ -143,6 +194,51 @@ section {
     background:  #3B0068;
 }
 
+@media (max-width: 768px) {
+    .form-regjistrohu {
+        flex-direction: column;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .form-regjistrohu img {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .form-regjistrohu form {
+        width: 100%;
+        max-width: 420px;
+        padding: 25px;
+    }
+
+    .form-regjistrohu h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-regjistrohu {
+        padding: 15px;
+    }
+
+    .form-regjistrohu img {
+        max-width: 100%;
+    }
+
+    .form-regjistrohu form {
+        padding: 20px;
+    }
+
+    .form-regjistrohu h2 {
+        font-size: 18px;
+    }
+
+    .form-regjistrohu button {
+        font-size: 15px;
+    }
+}
+
 .merch h1{
     text-align: center;
 }
@@ -185,6 +281,39 @@ section {
     height:35px;
 }
 
+@media (max-width: 900px) {
+    .jerseys {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .jersey img {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .merch h1 {
+        font-size: 22px;
+    }
+
+    .forma-f,
+    .forma2 select,
+    .forma2 button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .jersey img {
+        max-width: 280px;
+    }
+
+    .forma2 {
+        text-align: center;
+    }
+}
+
 .format-fund{
     width: 100%;
     max-width: 1000px;
@@ -213,6 +342,7 @@ section {
 
 form .row {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -300,6 +430,100 @@ form .row {
     font-size: 16px;
 }
 
+@media (max-width: 900px) {
+    .format-fund {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .bileta {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form .row {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .form-container,
+    .bileta {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-container h2,
+    .bileta h2 {
+        font-size: 18px;
+    }
+
+    .form-container button,
+    .bileta button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    form .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+     .format-fund {
+        max-width: 95%;  
+        padding: 0 10px;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .form-container,
+    .bileta {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .form-container h2,
+    .bileta h2 {
+        font-size: 16px;
+    }
+
+    .form-container button,
+    .bileta button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .row input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-container textarea {
+        font-size: 14px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    form .row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+
 
 
 .footer{
@@ -347,4 +571,86 @@ form .row {
 .footer-list li{
     color: #555;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .sponsors img {
+        width: 500px;
+        height: 50px;
+    }
+
+    .footer-row-2 {
+        padding: 0 20px 20px 20px;
+        gap: 20px;
+    }
+
+    .logo-f img {
+        width: 50px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .footer-list li {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sponsors img {
+        width: 350px;
+        height: 40px;
+    }
+
+    .logo-f img {
+        width: 40px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        gap: 6px;
+    }
+
+    .footer-list li {
+        font-size: 12px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row; 
+        flex-wrap: wrap;     
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sponsors img {
+        width: 250px;
+        height: 30px;
+    }
+
+    .logo-f img {
+        width: 35px;
+    }
+
+    .footer-text {
+        font-size: 11px;
+        gap: 5px;
+    }
+
+    .footer-list li {
+        font-size: 11px;
+    }
+
+    .footer-row-2 {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5px;
+    }
 }
