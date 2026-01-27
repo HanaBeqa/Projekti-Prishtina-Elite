@@ -1,0 +1,181 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #4b0082, #6a0dad, #8a2be2);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+}
+
+ul li a:hover {
+    background: #fff;
+    color: #4b0082;
+    transform: scale(1.1);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background: #6a0dad;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+td {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+
+tr:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+
+a, button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.edit {
+    background: #7f00ff;
+    color: #fff;
+}
+
+a.edit:hover {
+    background: #b266ff;
+}
+
+a.delete {
+    background: #ff1a75;
+    color: #fff;
+}
+
+a.delete:hover {
+    background: #ff66aa;
+}
+
+button {
+    background: #4b0082;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #6a0dad;
+    transform: scale(1.05);
+}
+
+
+form {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+form input:focus {
+    border: 2px solid #b266ff;
+    background: rgba(255,255,255,0.1);
+}
+
+form button[type="submit"] {
+    width: 150px;
+    align-self: flex-start;
+}
+
+
+@media(max-width: 768px){
+    table, form {
+        font-size: 0.9em;
+    }
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.7);
+}
