@@ -13,7 +13,7 @@ if(!$auth->isAdmin()){
 <html>
 <head>
     <title>Main Dashboard</title>
-    <link rel="stylesheet" href="main_dashboard_style.css">
+    <link rel="stylesheet" href="mainDashboardStyle.css">
 
 </head>
 <body>

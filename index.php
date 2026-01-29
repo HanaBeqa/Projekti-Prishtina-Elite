@@ -89,8 +89,9 @@ if ($auth->check()) {
         window.location.href = "SignUp.html";
     };
 
-    document.getElementById("loginBtn").onclick = function (event) {
-    event.preventDefault();
+    /*document.getElementById("loginBtn").onclick = function (event) {
+    event.preventDefault(); */
+    document.querySelector("form").addEventListener("submit", function (event) {
 
     let username = document.getElementById("username");
     let password = document.getElementById("password");
@@ -117,9 +118,13 @@ if ($auth->check()) {
         password.style.border = "2px solid green";
     }
 
+    if (!valid) {
+        event.preventDefault(); 
+    }
+
 
    
-};
+});
 </script>
 
 </body>
