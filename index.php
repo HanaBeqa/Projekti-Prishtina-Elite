@@ -1,3 +1,39 @@
+<?php
+include "Auth.php";
+$auth = new Auth();
+
+if (isset($_GET['logout'])) {
+    $auth->logout();
+}
+
+if (isset($_POST['login'])) {
+    $remember = isset($_POST['remember']);
+    $success = $auth->login($_POST['username'], $_POST['password'], $remember);
+
+    if ($success) {
+        if ($auth->role() === "admin") {
+            header("Location: main_dashboard.php");
+        } else {
+            header("Location: home.php");
+        }
+        exit;
+    } else {
+        $error = "Username ose password gabim!";
+    }
+}
+
+if ($auth->check()) {
+    if ($auth->role() === "admin") {
+        header("Location: main_dashboard.php");
+    } else {
+        header("Location: home.html");
+    }
+    exit;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +59,7 @@
         <button id="signupBtn" type="button">Sign Up</button>
     </div>
 
-    <form class="form login">
+    <form method="POST" class="form login">
         
 
         <div class="emailPassword">
@@ -36,6 +72,7 @@
             
         </div>
         <button class="submit" id="loginBtn">Log In</button>
+        <input type="checkbox" name="remember"> Remember Me<br><br>
     </form>
 
     
