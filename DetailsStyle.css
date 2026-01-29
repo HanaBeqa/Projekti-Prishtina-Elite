@@ -53,6 +53,11 @@ section {
     color: #ffffff;
 }
 
+.logout a{
+    background-color: indigo;
+    color: #ffffff;
+}
+
 @media (max-width: 1024px) {
     .logo img {
         width: 60px;
