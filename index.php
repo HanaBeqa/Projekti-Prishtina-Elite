@@ -118,10 +118,7 @@ if ($auth->check()) {
     }
 
 
-    if (valid) {
-        
-        window.location.href = "home.html";
-    }
+   
 };
 </script>
 
