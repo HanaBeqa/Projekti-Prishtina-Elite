@@ -64,15 +64,16 @@ if ($auth->check()) {
 
         <div class="emailPassword">
             <label >Username</label>
-            <input type="text" id="username">
+            <input type="text" id="username" name="username">
             
 
             <label>Password</label>
-            <input type="password" id="password">
+            <input type="password" id="password" name="password">
             
         </div>
-        <button class="submit" id="loginBtn">Log In</button>
         <input type="checkbox" name="remember"> Remember Me<br><br>
+        <button class="submit" id="loginBtn" name="login">Log In</button>
+        
     </form>
 
     
