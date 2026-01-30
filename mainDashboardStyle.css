@@ -1,102 +1,111 @@
-
-body {
-    font-family: 'Oswald', sans-serif;
-    background: linear-gradient(to right, #4B0082, #6A0DAD); /* Indigo gradient */
-    color: #fff;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 2.5em;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-}
-
-p {
-    text-align: center;
-    font-size: 1.2em;
+body {
+    background: #f7f8fc;
+    color: #333;
 }
 
 .dashboard-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px auto;
-    gap: 30px;
     max-width: 1200px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 30px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s, background 0.3s;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-}
-
-.card p {
-    font-size: 1em;
-    line-height: 1.4;
-}
-
-.card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #8A2BE2; 
-    color: #fff;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.card a:hover {
-    background-color: #4B0082;
-}
-
-.logout {
-    display: block;
-    text-align: center;
     margin: 40px auto;
-    padding: 10px 20px;
-    width: 150px;
-    background-color: #ff4d4d;
-    border-radius: 10px;
-    color: #fff;
+    padding: 20px;
+}
+
+
+.dashboard-header {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    position: relative;
+    border-left: 6px solid indigo;
+}
+
+.dashboard-header h1 {
+    color: indigo;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #666;
+}
+
+.logout-btn {
+    position: absolute;
+    right: 25px;
+    top: 25px;
     text-decoration: none;
+    background: indigo;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #3f3bbf;
+}
+
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 32px;
     font-weight: bold;
-    transition: background 0.3s;
+    color: indigo;
 }
 
-.logout:hover {
-    background-color: #cc0000;
+.management {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
 }
 
+.manage-card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
 
-@media (max-width: 768px) {
-    .dashboard-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.manage-card h3 {
+    color: indigo;
+    margin-bottom: 10px;
+}
 
-    .card {
-        width: 80%;
-    }
+.manage-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.manage-card:hover {
+    border-color: indigo;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }

@@ -71,7 +71,11 @@ if ($auth->check()) {
             <input type="password" id="password" name="password">
             
         </div>
-        <input type="checkbox" name="remember"> Remember Me<br><br>
+        <div class="remember">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember Me</label>
+        </div>
+        <br>
         <button class="submit" id="loginBtn" name="login">Log In</button>
         
     </form>
@@ -89,8 +93,7 @@ if ($auth->check()) {
         window.location.href = "SignUp.html";
     };
 
-    /*document.getElementById("loginBtn").onclick = function (event) {
-    event.preventDefault(); */
+   
     document.querySelector("form").addEventListener("submit", function (event) {
 
     let username = document.getElementById("username");

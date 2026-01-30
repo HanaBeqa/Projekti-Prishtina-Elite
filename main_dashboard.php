@@ -2,31 +2,83 @@
 include "Auth.php";
 $auth = new Auth();
 
-
 if(!$auth->isAdmin()){
     header("Location: home.php");
     exit;
 }
+
+$registrations = 124;
+$merchOrders   = 56;
+$ticketOrders  = 89;
+$messages      = 23;
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Main Dashboard</title>
+    <meta charset="UTF-8">
+    <title>Main Dashboard - Admin</title>
     <link rel="stylesheet" href="mainDashboardStyle.css">
-
 </head>
 <body>
-<h2>Main Dashboard - Admin</h2>
-<p>Mirë se erdhe, <?= $auth->user(); ?>!</p>
 
-<ul>
-    <li><a href="register_dashboard.php">Registers</a></li>
-    <li><a href="merch_dashboard.php">Merch Orders</a></li>
-    <li><a href="tickets_dashboard.php">Tickets Orders</a></li>
-    <li><a href="contact_dashboard.php">Contact Messages</a></li>
-</ul>
+<div class="dashboard-container">
 
-<a href="login.php?logout=true">Logout</a>
+   
+    <header class="dashboard-header">
+        <h1>Admin Dashboard</h1>
+        <p>Mirë se erdhe, <strong><?= $auth->user(); ?></strong></p>
+        <a class="logout-btn" href="login.php?logout=true">Logout</a>
+    </header>
+
+    
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Registrime</h3>
+            <p><?= $registrations ?></p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Merch Orders</h3>
+            <p><?= $merchOrders ?></p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Ticket Orders</h3>
+            <p><?= $ticketOrders ?></p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Mesazhe</h3>
+            <p><?= $messages ?></p>
+        </div>
+    </section>
+
+   
+    <section class="management">
+        <a href="register_dashboard.php" class="manage-card">
+            <h3>Registers</h3>
+            <p>Menaxho regjistrimet e përdoruesve</p>
+        </a>
+
+        <a href="merch_dashboard.php" class="manage-card">
+            <h3>Merch Orders</h3>
+            <p>Shiko dhe përditëso porositë</p>
+        </a>
+
+        <a href="tickets_dashboard.php" class="manage-card">
+            <h3>Tickets</h3>
+            <p>Menaxho biletat e shitura</p>
+        </a>
+
+        <a href="contact_dashboard.php" class="manage-card">
+            <h3>Contact</h3>
+            <p>Lexo mesazhet e ardhura</p>
+        </a>
+    </section>
+
+</div>
+
 </body>
 </html>
+
