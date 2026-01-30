@@ -42,7 +42,7 @@ $allMerch = $merch->getAll();
 </head>
 <body>
 <h2>Merch Orders Dashboard</h2>
-<a href="main_dashboard.php">Back to main dashboard</a>
+<a href="main_dashboard.php" id="back-link">Back to main dashboard</a>
 <table>
 <tr>
     <th>ID</th>
