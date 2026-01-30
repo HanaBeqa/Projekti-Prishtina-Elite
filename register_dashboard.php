@@ -44,7 +44,7 @@ $allRegisters = $register->getAll();
 </head>
 <body>
 <h2>Registers Dashboard</h2>
-<a href="dashboard.php">Back to main dashboard</a>
+<a href="main_dashboard.php">Back to main dashboard</a>
 <table>
 <tr>
     <th>ID</th>
