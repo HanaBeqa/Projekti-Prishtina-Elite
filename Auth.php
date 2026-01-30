@@ -26,7 +26,7 @@ class Auth {
         }
 
        
-        if($username == "user" && $password == "123"){
+        if($username == "user" && $password == "1234567"){
             $_SESSION['user'] = $username;
             $_SESSION['role'] = "user";
 
@@ -57,7 +57,7 @@ class Auth {
         session_destroy();
         setcookie("remember_user", "", time()-3600, "/");
         setcookie("remember_role", "", time()-3600, "/");
-        header("Location: login.php");
+        header("Location: index.php");
         exit;
     }
 
