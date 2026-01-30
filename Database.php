@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "prishtina_elite";
+    private $db_name = "prishtinaelite";
     private $username = "root";
     private $password = "";
     public $conn;
