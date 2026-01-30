@@ -179,3 +179,30 @@ footer {
     font-size: 0.9em;
     color: rgba(255,255,255,0.7);
 }
+
+form textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    resize: vertical;
+    min-height: 100px;
+}
+
+form textarea:focus {
+    border: 2px solid #b266ff;
+    background: rgba(255,255,255,0.1);
+}
+
+form select {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+}
+form select:focus {
+    border: 2px solid #b266ff;
+}
