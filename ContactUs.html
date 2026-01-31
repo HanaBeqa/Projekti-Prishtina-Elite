@@ -38,17 +38,17 @@
             <label for="age">Age:</label><br>
             <input type="number" id="regAge" name="age" class="input"><br>
             <label for="gender">Gender:</label><br><br>
-            <input type="radio" id="male" name="gender" class="radio">
+            <input type="radio" id="male" value="Male" name="gender" class="radio">
             <label  class="gjinia" for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" class="radio">
+            <input type="radio" id="female" value="Female" name="gender" class="radio">
             <label  class="gjinia" for="female">Female</label><br><br>
             <label for="shkollat">Choose a Voleyball school:</label><br>
             <select id="shkollat" name="school">
-                <option value="school1">Ballon Salla</option>
-                <option value="school2">Dardania</option>
-                <option value="school3">Iliria</option>
-                <option value="school4">Pavarsia</option>
-                <option value="school5">Mehmet Xhevori</option>
+                <option value="Ballon Salla">Ballon Salla</option>
+                <option value="Dardania">Dardania</option>
+                <option value="Iliria">Iliria</option>
+                <option value="Pavarsia">Pavarsia</option>
+                <option value="Mehmet Xhevori">Mehmet Xhevori</option>
             </select><br>
             <label for="email">Email:</label><br>
             <input type="email" id="regEmail" name="email" class="input"><br>
@@ -76,8 +76,8 @@
         <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
         <select  id="jersey" name="jersey_type" placeholder="Select Jersey">
             <option value="Select Jersey">Select Jersey</option>
-            <option value="home">Home Jersey - 35€</option>
-            <option value="away">Away Jersey - 35€</option>
+            <option value="Home Jersey">Home Jersey - 35€</option>
+            <option value="Away Jersey">Away Jersey - 35€</option>
         </select><br><br>
         <label for="size">Select Size:</label><br><br>
         <input class="radio" type="radio" id="sizeS" name="size" placeholder="Select Size">
@@ -131,17 +131,17 @@
 
     <label>Choose Team</label><br>
     <select id="ticketTeam" name="team">
-        <option>Team A</option>
-        <option>Team B</option>
+        <option value="Team A">Team A</option>
+        <option value="Team B">Team B</option>
     </select><br><br>
 
     <label>Ticket Quantity</label><br>
     <input type="number" name="quantity" id="ticketQuantity" min="1" max="10" value="1"><br><br>
     <label>Seat Type</label><br>
     <select id="ticketSeat" name="seat_type">
-        <option>Regular</option>
-        <option>VIP</option>
-        <option>Premium</option>
+        <option value="Regular">Regular</option>
+        <option value="VIP">VIP</option>
+        <option value="Premium">Premium</option>
     </select><br><br>
 
     <button>Buy Ticket</button>
