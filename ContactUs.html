@@ -29,21 +29,21 @@
 
     <section class="form-regjistrohu">
         <img src="foto_form.jpeg" alt="foto ekipore">
-        <form action="Register.html" onsubmit="return validateRegistration()">
+        <form action="Register.html"  method="POST" onsubmit="return validateRegistration()">
             <h2>Register in our Voleyball schools</h2>
             <label for="fullName">Full Name:</label><br>
-            <input type="text" id="fullName" name="fullName" class="input"><br>
+            <input type="text" id="fullName" name="full_name" class="input"><br>
             <label for="parentName">Parent Name:</label><br>
-            <input type="text" id="parentName" name="parentName" class="input"><br>
+            <input type="text" id="parentName" name="parent_name" class="input"><br>
             <label for="age">Age:</label><br>
             <input type="number" id="regAge" name="age" class="input"><br>
             <label for="gender">Gender:</label><br><br>
-            <input type="radio" id="male" name="choice" class="radio">
+            <input type="radio" id="male" name="gender" class="radio">
             <label  class="gjinia" for="male">Male</label><br>
-            <input type="radio" id="female" name="choice" class="radio">
+            <input type="radio" id="female" name="gender" class="radio">
             <label  class="gjinia" for="female">Female</label><br><br>
             <label for="shkollat">Choose a Voleyball school:</label><br>
-            <select id="shkollat" name="shkollat">
+            <select id="shkollat" name="school">
                 <option value="school1">Ballon Salla</option>
                 <option value="school2">Dardania</option>
                 <option value="school3">Iliria</option>
@@ -69,12 +69,12 @@
     </div>
 
 <div class="forma2">
-    <form action="Merch.html" onsubmit="return validateMerch()">
+    <form action="Merch.html"   method="POST" onsubmit="return validateMerch()">
         
         <input class="forma-f" type="text" id="merchName" name="name" placeholder="Full Name"><br><br>
         <input class="forma-f" type="email" id="merchEmail" name="email" placeholder="Email"><br><br>
         <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
-        <select  id="jersey" name="jersey" placeholder="Select Jersey">
+        <select  id="jersey" name="jersey_type" placeholder="Select Jersey">
             <option value="Select Jersey">Select Jersey</option>
             <option value="home">Home Jersey - 35€</option>
             <option value="away">Away Jersey - 35€</option>
@@ -106,7 +106,7 @@
 <div class="form-container">
     <h2>Get in Touch</h2>
 
-    <form action="thankYou.html" onsubmit="return validateContactForm()">
+    <form action="thankYou.html"  method="POST" onsubmit="return validateContactForm()">
         <div class="row">
             <input type="text" id="contactName" placeholder="Full Name" >
             <input type="email" id="contactEmail" placeholder="Email">
@@ -125,20 +125,20 @@
 
 <div class="bileta">
     <h2>Buy Tickets</h2>
-<form action="tickets.html" onsubmit="return validateTickets()">
+<form action="tickets.html"  method="POST" onsubmit="return validateTickets()">
     <label>Full Name</label><br>
-    <input type="text" id="ticketName" placeholder="Enter your name"><br><br>
+    <input type="text" name="full_name" id="ticketName" placeholder="Enter your name"><br><br>
 
     <label>Choose Team</label><br>
-    <select id="ticketTeam">
+    <select id="ticketTeam" name="team">
         <option>Team A</option>
         <option>Team B</option>
     </select><br><br>
 
     <label>Ticket Quantity</label><br>
-    <input type="number" id="ticketQuantity" min="1" max="10" value="1"><br><br>
+    <input type="number" name="quantity" id="ticketQuantity" min="1" max="10" value="1"><br><br>
     <label>Seat Type</label><br>
-    <select id="ticketSeat">
+    <select id="ticketSeat" name="seat_type">
         <option>Regular</option>
         <option>VIP</option>
         <option>Premium</option>
