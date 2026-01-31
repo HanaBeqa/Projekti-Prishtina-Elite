@@ -29,7 +29,7 @@
 
     <section class="form-regjistrohu">
         <img src="foto_form.jpeg" alt="foto ekipore">
-        <form action="Register.html"  method="POST" onsubmit="return validateRegistration()">
+        <form action="handlers/register_store.php"  method="POST" onsubmit="return validateRegistration()">
             <h2>Register in our Voleyball schools</h2>
             <label for="fullName">Full Name:</label><br>
             <input type="text" id="fullName" name="full_name" class="input"><br>
@@ -69,7 +69,7 @@
     </div>
 
 <div class="forma2">
-    <form action="Merch.html"   method="POST" onsubmit="return validateMerch()">
+    <form action="handlers/merch_store.php"   method="POST" onsubmit="return validateMerch()">
         
         <input class="forma-f" type="text" id="merchName" name="name" placeholder="Full Name"><br><br>
         <input class="forma-f" type="email" id="merchEmail" name="email" placeholder="Email"><br><br>
@@ -106,7 +106,7 @@
 <div class="form-container">
     <h2>Get in Touch</h2>
 
-    <form action="thankYou.html"  method="POST" onsubmit="return validateContactForm()">
+    <form action="handlers/contact_store.php"  method="POST" onsubmit="return validateContactForm()">
         <div class="row">
             <input type="text" id="contactName" placeholder="Full Name" >
             <input type="email" id="contactEmail" placeholder="Email">
@@ -125,7 +125,7 @@
 
 <div class="bileta">
     <h2>Buy Tickets</h2>
-<form action="tickets.html"  method="POST" onsubmit="return validateTickets()">
+<form action="handlers/tickets_store.php"  method="POST" onsubmit="return validateTickets()">
     <label>Full Name</label><br>
     <input type="text" name="full_name" id="ticketName" placeholder="Enter your name"><br><br>
 
