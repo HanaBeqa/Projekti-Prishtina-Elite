@@ -74,19 +74,19 @@
         <input class="forma-f" type="text" id="merchName" name="name" placeholder="Full Name"><br><br>
         <input class="forma-f" type="email" id="merchEmail" name="email" placeholder="Email"><br><br>
         <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
-        <select  id="jersey" name="jersey_type" placeholder="Select Jersey">
-            <option value="Select Jersey">Select Jersey</option>
+        <select  id="jersey" name="jersey_type" placeholder="Select Jersey" required>
+            <option value="">Select Jersey</option>
             <option value="Home Jersey">Home Jersey - 35€</option>
             <option value="Away Jersey">Away Jersey - 35€</option>
         </select><br><br>
         <label for="size">Select Size:</label><br><br>
-        <input class="radio" type="radio" id="sizeS" name="size" placeholder="Select Size">
+        <input class="radio" type="radio" id="sizeS" name="size" value="S" required>
         <label for="sizeS">S</label><br>
-        <input class="radio" type="radio" id="sizeM" name="size" placeholder="Select Size">
+        <input class="radio" type="radio" id="sizeM" name="size" value="M" >
         <label for="sizeM">M</label><br>
-        <input class="radio" type="radio" id="sizeL" name="size" placeholder="Select Size">
+        <input class="radio" type="radio" id="sizeL" name="size" value="L" >
         <label for="sizeL">L</label><br>
-        <input class="radio" type="radio" id="sizeXL" name="size" placeholder="Select Size">
+        <input class="radio" type="radio" id="sizeXL" name="size" value="XL">
         <label for="sizeXL">XL</label>
     </input><br><br>
         <button type="submit" value="Order">Order</button>
@@ -108,17 +108,16 @@
 
     <form action="handlers/contact_store.php"  method="POST" onsubmit="return validateContactForm()">
         <div class="row">
-            <input type="text" id="contactName" placeholder="Full Name" >
-            <input type="email" id="contactEmail" placeholder="Email">
+            <input type="text" id="contactName" name="full_name" placeholder="Full Name" >
+            <input type="email" id="contactEmail" name="email" placeholder="Email">
         </div>
 
         <div class="row">
-           <input type="text" id="contactPhone" placeholder="Phone Number">
-           <input type="text" id="contactSubject" placeholder="Subject">
+           <input type="text" id="contactPhone" name="phone" placeholder="Phone Number">
+           <input type="text" id="contactSubject" name="subject" placeholder="Subject">
         </div>
 
-        <textarea id="contactMessage" placeholder="Your Message"></textarea><br><br>
-
+        <textarea id="contactMessage" name="message" placeholder="Your Message"></textarea><br><br>
         <button type="submit">Message</button>
     </form>
 </div>

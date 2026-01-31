@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $merch = new Merch();
     $merch->add(
-        $_POST['full_name'],
+        $_POST['name'],
         $_POST['email'],
         $_POST['phone'],
         $_POST['jersey_type'],
