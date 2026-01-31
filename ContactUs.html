@@ -75,7 +75,7 @@
         <input class="forma-f" type="email" id="merchEmail" name="email" placeholder="Email"><br><br>
         <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
         <select  id="jersey" name="jersey_type" placeholder="Select Jersey" required>
-            <option value="">Select Jersey</option>
+            <option value="" disabled selected>Select Jersey</option>
             <option value="Home Jersey">Home Jersey - 35€</option>
             <option value="Away Jersey">Away Jersey - 35€</option>
         </select><br><br>
@@ -236,10 +236,11 @@ function validateMerch() {
     if (!checkEmail(email)) valid = false;
     if (!checkPhone(phone)) valid = false;
 
-    if (jersey.value === "Select Jersey") {
-        jersey.style.border = "2px solid red";
-        valid = false;
-    } 
+    if (!jersey.value) {  
+    jersey.style.border = "2px solid red";
+    alert("Please select a jersey type!");
+    return false;
+    }
     if (!size) {
          alert("Please complete all merch fields correctly!");
         return false;
