@@ -76,8 +76,8 @@
         <input class="forma-f" type="tel" id="merchPhone" name="phone" placeholder="Phone Number"><br><br>
         <select  id="jersey" name="jersey_type" placeholder="Select Jersey" required>
             <option value="" disabled selected>Select Jersey</option>
-            <option value="Home Jersey">Home Jersey - 35€</option>
-            <option value="Away Jersey">Away Jersey - 35€</option>
+            <option value="Home">Home Jersey - 35€</option>
+            <option value="Away">Away Jersey - 35€</option>
         </select><br><br>
         <label for="size">Select Size:</label><br><br>
         <input class="radio" type="radio" id="sizeS" name="size" value="S" required>
@@ -238,7 +238,6 @@ function validateMerch() {
 
     if (!jersey.value) {  
     jersey.style.border = "2px solid red";
-    alert("Please select a jersey type!");
     return false;
     }
     if (!size) {
