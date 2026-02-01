@@ -5,7 +5,7 @@ if(!isset($_SESSION['user']) || $_SESSION['role'] != 'admin'){
     exit;
 }
 
-include "Video.php";
+include_once "Video.php";
 $videoObj = new Video();
 
 
@@ -15,28 +15,27 @@ if(isset($_GET['delete'])){
     exit;
 }
 
+
 if(isset($_POST['save'])){
     $id = $_POST['id'] ?? null;
-    $title = $_POST['title'];
-    $description = $_POST['description'];
-    $iframe_url = $_POST['iframe_url'];
+    $iframe = $_POST['iframe'] ?? '';
+    $description = $_POST['description'] ?? '';
+    $date = $_POST['date_created'] ?? date('Y-m-d');
 
     if($id){
-        $videoObj->update($id, $title, $description, $iframe_url);
+        $videoObj->update($id, $iframe, $description, $date);
     } else {
-        $videoObj->add($title, $description, $iframe_url);
+        $videoObj->add($iframe, $description, $date);
     }
-
     header("Location: videos_dashboard.php");
     exit;
 }
 
 $videos = $videoObj->getAll();
-
-$edit = ['id'=>'','title'=>'','description'=>'','iframe_url'=>''];
+$edit = ['id'=>'','iframe'=>'','description'=>'','date_created'=>''];
 if(isset($_GET['edit'])){
     $edit = $videoObj->get($_GET['edit']);
-    if(!$edit) $edit = ['id'=>'','title'=>'','description'=>'','iframe_url'=>''];
+    if(!$edit) $edit = ['id'=>'','iframe'=>'','description'=>'','date_created'=>''];
 }
 ?>
 <!DOCTYPE html>
@@ -47,23 +46,22 @@ if(isset($_GET['edit'])){
 </head>
 <body>
 <h2>Videos Dashboard</h2>
-<a href="main_dashboard.php" id="back-link">Back to main dashboard</a>
+<a href="main_dashboard.php">Back to main dashboard</a>
 
 <table>
 <tr>
     <th>ID</th>
-    <th>Title</th>
+    <th>Iframe</th>
     <th>Description</th>
-    <th>Iframe URL</th>
+    <th>Date</th>
     <th>Actions</th>
 </tr>
-
 <?php foreach($videos as $v): ?>
 <tr>
     <td><?= $v['id'] ?></td>
-    <td><?= htmlspecialchars($v['title']) ?></td>
+    <td><?= htmlspecialchars($v['iframe']) ?></td>
     <td><?= htmlspecialchars($v['description']) ?></td>
-    <td><a href="<?= $v['iframe_url'] ?>" target="_blank">View iframe</a></td>
+    <td><?= $v['date_created'] ?></td>
     <td>
         <a href="?edit=<?= $v['id'] ?>">Edit</a> |
         <a href="?delete=<?= $v['id'] ?>" onclick="return confirm('Delete this video?')">Delete</a>
@@ -75,12 +73,12 @@ if(isset($_GET['edit'])){
 <h3>Add / Edit Video</h3>
 <form method="post">
     <input type="hidden" name="id" value="<?= $edit['id'] ?>">
-    <label>Title:</label><br>
-    <input type="text" name="title" value="<?= htmlspecialchars($edit['title']) ?>" required><br>
-    <label>Description:</label><br>
-    <textarea name="description"><?= htmlspecialchars($edit['description']) ?></textarea><br>
-    <label>Iframe URL:</label><br>
-    <input type="text" name="iframe_url" value="<?= htmlspecialchars($edit['iframe_url']) ?>" required><br>
+    <p>Iframe embed code:</p>
+    <textarea name="iframe" required><?= htmlspecialchars($edit['iframe']) ?></textarea>
+    <p>Description:</p>
+    <input type="text" name="description" value="<?= htmlspecialchars($edit['description']) ?>">
+    <p>Date:</p>
+    <input type="date" name="date_created" value="<?= $edit['date_created'] ?: date('Y-m-d') ?>">
     <button type="submit" name="save">Save</button>
 </form>
 </body>

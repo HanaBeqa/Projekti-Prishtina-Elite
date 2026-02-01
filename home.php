@@ -6,7 +6,7 @@ $allStandings = $standingsObj->getAll();
 
 include_once "Video.php";
 $videoObj = new Video();
-$videos = $videoObj->getAll();
+$allVideos = $videoObj->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -111,20 +111,26 @@ $videos = $videoObj->getAll();
             </div>        
          </section>
 
-          <section class="videos-text">
-    <h2>Game videos</h2>
-    <div class="video-container">
-        <?php foreach($videos as $v): ?>
-        <div class="next-video">
-            <iframe src="<?= htmlspecialchars($v['iframe_url']) ?>" title="<?= htmlspecialchars($v['title']) ?>" frameborder="0" allowfullscreen></iframe>
-            <div class="video-desc">
-                <p><?= htmlspecialchars($v['title']) ?></p>
-                <p><?= htmlspecialchars($v['description']) ?></p>
+           <section class="videos-text">
+            <h2>Game videos</h2>
+             <div class="video-container">
+            <div id="video1">
+                <iframe src="https://www.youtube.com/embed/gBIJJAMID60?si=98nhecwaGKIxQ0QS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Finalja: Prishtina Elite vs Feronikeli!</p>
             </div>
-        </div>
-        <?php endforeach; ?>
-    </div>
-</section>
+            <div class="other-videos">
+             <?php foreach($allVideos as $v): ?>
+             <div class="next-video">
+             <?= $v['iframe'] ?>
+            <div class="video-desc">
+                <p><?= date("F j, Y", strtotime($v['date_created'])) ?></p>
+                <p><?= htmlspecialchars($v['description']) ?></p>
+             </div>
+             </div>
+          <?php endforeach; ?>
+            </div>
+            </div>
+        </section>
 
 
 

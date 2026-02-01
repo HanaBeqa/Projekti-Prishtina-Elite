@@ -10,27 +10,32 @@ class Video {
         $this->conn->exec("set names utf8");
     }
 
-    public function add($title, $description, $iframe_url) {
-        $stmt = $this->conn->prepare("INSERT INTO videos (title, description, iframe_url, created_at) VALUES (?, ?, ?, NOW())");
-        return $stmt->execute([$title, $description, $iframe_url]);
+    
+    public function add($iframe, $description, $date) {
+        $stmt = $this->conn->prepare("INSERT INTO videos (iframe, description, date_created) VALUES (?, ?, ?)");
+        return $stmt->execute([$iframe, $description, $date]);
     }
 
+  
     public function getAll() {
-        $stmt = $this->conn->query("SELECT * FROM videos ORDER BY created_at DESC");
+        $stmt = $this->conn->query("SELECT * FROM videos ORDER BY date_created DESC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    
     public function get($id) {
-        $stmt = $this->conn->prepare("SELECT * FROM videos WHERE id=?");
+        $stmt = $this->conn->prepare("SELECT * FROM videos WHERE id = ?");
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function update($id, $title, $description, $iframe_url) {
-        $stmt = $this->conn->prepare("UPDATE videos SET title=?, description=?, iframe_url=? WHERE id=?");
-        return $stmt->execute([$title, $description, $iframe_url, $id]);
+
+    public function update($id, $iframe, $description, $date) {
+        $stmt = $this->conn->prepare("UPDATE videos SET iframe=?, description=?, date_created=? WHERE id=?");
+        return $stmt->execute([$iframe, $description, $date, $id]);
     }
 
+   
     public function delete($id) {
         $stmt = $this->conn->prepare("DELETE FROM videos WHERE id=?");
         return $stmt->execute([$id]);
