@@ -7,6 +7,10 @@ $allStandings = $standingsObj->getAll();
 include_once "Video.php";
 $videoObj = new Video();
 $allVideos = $videoObj->getAll();
+
+include_once "Match.php";
+$matchObj = new Match();
+$allMatches = $matchObj->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -41,39 +45,18 @@ $allVideos = $videoObj->getAll();
     </div>
     </header>
     <br>
+   
     <section class="Schedule">
    <h1>Results 2025:</h1>
     <div class="row">
+        <?php foreach($allMatches as $m): ?>
         <div class="rezults">
-            <img src="Feronikeli.png" alt="Feronikeli">
-            <p>Prishtina Elite vs Feronikeli</p>
+            <img src="<?= htmlspecialchars($m['image_path']) ?>" alt="<?= htmlspecialchars($m['team_opponent']) ?>">
+            <p>Prishtina Elite vs <?= htmlspecialchars($m['team_opponent']) ?></p>
         </div>
-          <div class="rezults">
-            <img src="Klina.png" alt="Klina">
-            <p>Prishtina Elite vs Klina</p>
-        </div>
-          <div class="rezults">
-            <img src="Kastrioti.png" alt="Kastrioti">
-            <p>Prishtina Elite vs Kastrioti</p>
-        </div>
-          <div class="rezults">
-            <img src="Trepqa.png" alt="Trepqa">
-            <p>Prishtina Elite vs Trepqa</p>
-        </div> 
-         <div class="rezults">
-            <img src="Suti.png" alt="Suti">
-            <p>Prishtina Elite vs Suti Sport</p>
-        </div>
-          <div class="rezults">
-            <img src="Ulpiana.png" alt="Ulpiana">
-            <p>Prishtina Elite vs Ulpiana</p>
-        </div>
-          <div class="rezults">
-            <img src="Peja.png" alt="Peja">
-            <p>Prishtina Elite vs Peja</p>
-        </div>
-         </div>
-         </section>
+        <?php endforeach; ?>
+    </div>
+    </section>
 
          <section class="tabela-champ">
             <div id="tab">
