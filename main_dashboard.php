@@ -85,7 +85,14 @@ $messages      = 23;
         <a href="players_dashboard.php" class="manage-card">
         <h3>Player List</h3>
         <p>Menaxho listën e lojtareve</p>
-    </a>
+        </a>
+
+
+        <a href="lastmatch_dashboard.php" class="manage-card">
+        <h3>Last Match Photos</h3>
+        <p>Menaxho fotot e fundit të lojës</p>
+        </a>
+
     </section>
 
 </div>

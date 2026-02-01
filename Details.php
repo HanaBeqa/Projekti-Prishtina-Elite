@@ -1,3 +1,10 @@
+<?php
+include_once "LastMatchPhoto.php";
+
+$photoObj = new LastMatchPhoto();
+$photos = $photoObj->getAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +23,7 @@
         <li><a href="home.php">Home</a></li>
         <li><a href="aboutsUs.php">About Us</a></li>
         <li><a href="ContactUs.html">Contact us</a></li>
-        <li><a href="Details.html">Details</a></li>
+        <li><a href="Details.php">Details</a></li>
         <li><a href="activities.html">Activities</a></li>
         <li class="logout"><a href="index.php?logout=1">Log Out</a></li>
         
@@ -36,71 +43,17 @@
     </section>
 
     <section class="match-photos">
-        <h1>LAST MATCH — PHOTOS</h1>
+    <h1>LAST MATCH — PHOTOS</h1>
 
-        <div class="gallery">
-            <div class="photo">
-                <img src="IMG_6726.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0565.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0568.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0576.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0582.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0588.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_0592.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6719.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6728.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6756.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6760.jpeg" alt="">
-            </div>
-
-             <div class="photo">
-                <img src="IMG_0583.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6769.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6772.jpeg" alt="">
-            </div>
-
-            <div class="photo">
-                <img src="IMG_6773.jpeg" alt="">
-            </div>
+    <div class="gallery">
+    <?php foreach($photos as $row) { ?>
+        <div class="photo">
+            <img src="<?= htmlspecialchars($row['image_path']) ?>" alt="Last match photo">
         </div>
+    <?php } ?>
+</div>
 
-    </section>
+</section>
 
     <section class="posters">
         <h1>RECENT POSTERS</h1>
