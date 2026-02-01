@@ -22,7 +22,7 @@ $activities = $activityObj->getAll();
         <li><a href="home.php">Home</a></li>
         <li><a href="aboutsUs.php">About Us</a></li>
         <li><a href="ContactUs.html">Contact us</a></li>
-        <li><a href="Details.html">Details</a></li>
+        <li><a href="Details.php">Details</a></li>
         <li><a href="activities.php">Activities</a></li>
         <li class="logout"><a href="index.php?logout=1">Log Out</a></li>
      </ul>
