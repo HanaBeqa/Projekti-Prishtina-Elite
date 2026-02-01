@@ -20,8 +20,8 @@ $allStandings = $standingsObj->getAll();
         <img src="llogo.jpg" alt="Prishtina Elite logo">
      </div>
      <ul class="list">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="aboutsUs.html">About Us</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="aboutsUs.php">About Us</a></li>
         <li><a href="ContactUs.html">Contact us</a></li>
         <li><a href="Details.html">Details</a></li>
         <li><a href="activities.html">Activities</a></li>
