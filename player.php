@@ -18,8 +18,8 @@ class Player {
     }
 
     public function getAll() {
-        $stmt = $this->conn->query("SELECT * FROM players ORDER BY id DESC");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt = $this->conn->query("SELECT * FROM players ORDER BY number ASC");
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function update($id, $full_name, $number, $position, $image) {
