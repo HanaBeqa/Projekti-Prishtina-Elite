@@ -108,6 +108,11 @@ $messages      = 23;
         <p>Menaxho rezultatet e lojës</p>
         </a>
 
+        <a href="activities_dashboard.php" class="manage-card">
+        <h3>Activities</h3>
+        <p>Menaxho aktivitetet e fundit</p>
+        </a>
+
 
     </section>
 
