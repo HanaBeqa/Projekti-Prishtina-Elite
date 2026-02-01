@@ -75,6 +75,11 @@ $messages      = 23;
             <h3>Contact</h3>
             <p>Lexo mesazhet e ardhura</p>
         </a>
+
+        <a href="standings_dashboard.php" class="manage-card">
+        <h3>Standings</h3>
+        <p>Menaxho tabelën e kampionatit</p>
+    </a>
     </section>
 
 </div>

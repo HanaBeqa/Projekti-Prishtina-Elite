@@ -1,3 +1,10 @@
+<?php
+include_once "Standing.php";
+
+$standingsObj = new Standing();
+$allStandings = $standingsObj->getAll();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,69 +89,16 @@
                     <th>Won</th>
                     <th>Lost</th>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Prishtina Elite</td>
-                    <td>17</td>
-                    <td>7</td>
-                    <td>6</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Peja</td>
-                    <td>15</td>
-                    <td>7</td>
-                    <td>5</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Kastrioti</td>
-                    <td>13</td>
-                    <td>7</td>
-                    <td>4</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Suti Sport</td>
-                    <td>12</td>
-                    <td>7</td>
-                    <td>4</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Feronikeli</td>
-                    <td>10</td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>Trepqa</td>
-                    <td>9</td>
-                    <td>7</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>Ulpiana</td>
-                    <td>8</td>
-                    <td>7</td>
-                    <td>2</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>Klina</td>
-                    <td>0</td>
-                    <td>7</td>
-                    <td>0</td>
-                    <td>7</td>
+                <?php $rank = 1; foreach($allStandings as $s): ?>
+            <tr>
+                <td><?= $rank++ ?></td>
+                <td><?= htmlspecialchars($s['name']) ?></td>
+                <td><?= $s['points'] ?></td>
+                <td><?= $s['played'] ?></td>
+                <td><?= $s['won'] ?></td>
+                <td><?= $s['lost'] ?></td>
+            </tr>
+            <?php endforeach; ?>
             </table>
             </div>
             <div class="leaders">
