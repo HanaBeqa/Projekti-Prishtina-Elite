@@ -93,6 +93,11 @@ $messages      = 23;
         <p>Menaxho fotot e fundit të lojës</p>
         </a>
 
+        <a href="posters_dashboard.php" class="manage-card">
+        <h3>Posters</h3>
+        <p>Menaxho posterat e fundit</p>
+        </a>
+
     </section>
 
 </div>
