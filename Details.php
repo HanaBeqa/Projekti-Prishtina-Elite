@@ -1,8 +1,12 @@
 <?php
 include_once "LastMatchPhoto.php";
+include_once "Poster.php";
 
 $photoObj = new LastMatchPhoto();
 $photos = $photoObj->getAll();
+
+$posterObj = new Poster();  
+$posters = $posterObj->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -56,36 +60,16 @@ $photos = $photoObj->getAll();
 </section>
 
     <section class="posters">
-        <h1>RECENT POSTERS</h1>
-        <div class="posters-container">
+    <h1>RECENT POSTERS</h1>
+    <div class="posters-container">
+        <?php foreach($posters as $p): ?>
+            <div class="posteri">
+                <img src="<?= htmlspecialchars($p['image_path']) ?>" alt="poster">
+            </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
-            <div class="posteri">
-                <img src="IMG_0811.jpeg" alt="poster1">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0812.jpeg" alt="poster2">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0813.jpeg" alt="poster3">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0814.jpeg" alt="poster4">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0815.jpeg" alt="poster5">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0816.jpeg" alt="poster6">
-            </div>
-            <div class="posteri">
-                <img src="IMG_0817.jpeg" alt="poster7">
-                
-            </div>
-
-
-
-        </div>
-    </section>
 
 <section class="vlerat">
     <h1>OUR VALUES</h1>
