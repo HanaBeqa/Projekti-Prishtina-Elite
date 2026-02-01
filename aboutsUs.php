@@ -1,3 +1,12 @@
+<?php
+require_once "Database.php";
+require_once "Player.php";
+
+$player = new Player();
+$players = $player->getAll();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,154 +49,18 @@ Prishtina Elite is known for developing young talents and local players, without
 
     <section class="titulli-players">
         <h1>Team Players</h1>
-         <div class="Container-players">
-            
-              <div class="players-foto">
-                <img src="IMG_0731.jpeg">
-            <div class="player-info">
-            <h3>Vesa Podujeva – <br>#2</h3>
-            <p>Libero</p>
-            <h3>-C</h3>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0732.jpeg">
-            <div class="player-info">
-            <h3>Hana Bicaj – <br>#3</h3>
-            <p>Outside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0735.jpeg">
-            <div class="player-info">
-            <h3>Ezana Latifi<br> – <br>#4</h3>
-            <p>Opposite Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0736.jpeg">
-            <div class="player-info">
-            <h3>Rina Murtezi – <br> #5</h3>
-            <p>Setter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0737.jpeg">
-            <div class="player-info">
-            <h3>Klea Lluka<br> – <br>#6</h3>
-            <p>Rightside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0738.jpeg">
-            <div class="player-info">
-            <h3>Buna Rama  – <br>#7</h3>
-            <p>Middle Blocker</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0739.jpeg">
-            <div class="player-info">
-            <h3>Erda Burani – <br>#8</h3>
-            <p>Rightside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0740.jpeg">
-            <div class="player-info">
-            <h3>Loreta Zhdrella – <br>#10</h3>
-            <p>Outside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0741.jpeg">
-            <div class="player-info">
-            <h3>Vesa Beqa <br>– <br>#11</h3>
-            <p>Outside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0742.jpeg">
-            <div class="player-info">
-            <h3>Hana Beqa <br>– <br>#12</h3>
-            <p>Outside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0743.jpeg">
-            <div class="player-info">
-            <h3>Merisa Slivova – <br>#14</h3>
-            <p>Middle Blocker</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0744.jpeg">
-            <div class="player-info">
-            <h3>Hena Haziri – <br>#15</h3>
-            <p>Setter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0745.jpeg">
-            <div class="player-info">
-            <h3>Margarita Bonjiku <br>– <br>#16</h3>
-            <p>Outside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0746.jpeg">
-            <div class="player-info">
-            <h3>Unika Ademi – <br>#17</h3>
-            <p>Middle Blocker</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0747.jpeg">
-            <div class="player-info">
-            <h3>Rea Rexha – <br>#19</h3>
-            <p>Middle Blocker</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0748.jpeg">
-            <div class="player-info">
-            <h3>Yllza Haziri – <br>#20</h3>
-            <p>Libero</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0749.jpeg">
-            <div class="player-info">
-            <h3>Trina Rama<br> – <br>#22</h3>
-            <p>Rightside Hitter</p>
-            </div>
-              </div>
-
-                <div class="players-foto">
-                <img src="IMG_0750.jpeg">
-            <div class="player-info">
-            <h3>Amra Ilazi – <br>#23</h3>
-            <p>Libero</p>
-            </div>
-
-              </div>
+        <div class="Container-players">
+        <?php foreach($players as $p): ?>
+        <div class="players-foto">
+        <img src="<?= $p['image'] ?>">
+        <div class="player-info">
+            <h3><?= $p['full_name'] ?> – <br>#<?= $p['number'] ?></h3>
+            <p><?= $p['position'] ?></p>
         </div>
+        </div>
+        <?php endforeach; ?>
+        </div>
+
     </section>
 
     <section class="titulli-coaches">

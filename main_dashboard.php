@@ -79,6 +79,12 @@ $messages      = 23;
         <a href="standings_dashboard.php" class="manage-card">
         <h3>Standings</h3>
         <p>Menaxho tabelën e kampionatit</p>
+        </a>
+
+        
+        <a href="players_dashboard.php" class="manage-card">
+        <h3>Player List</h3>
+        <p>Menaxho listën e lojtareve</p>
     </a>
     </section>
 

@@ -169,13 +169,23 @@ section {
      margin-bottom: 20px;
 }
 
-.gallery {
+/*.gallery {
     overflow-x: scroll; 
     white-space: nowrap; 
     padding-bottom: 10px;
+}*/
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
-.photo {
+
+/*.photo {
     display: inline-block;
     width: 450px;
     height: 350px;
@@ -184,7 +194,17 @@ section {
     border-radius: 6px;
     overflow: hidden;
     border: 1px solid #999; 
+}*/
+.photo {
+    flex: 0 0 auto;
+    width: 450px;
+    height: 350px;
+    background: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #999;
 }
+
 
 .photo img {
     width: 100%;
