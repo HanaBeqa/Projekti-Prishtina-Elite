@@ -8,8 +8,8 @@ include_once "Video.php";
 $videoObj = new Video();
 $allVideos = $videoObj->getAll();
 
-include_once "Match.php";
-$matchObj = new Match();
+include_once "Matches.php";
+$matchObj = new Matches();
 $allMatches = $matchObj->getAll();
 ?>
 

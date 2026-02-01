@@ -103,7 +103,7 @@ $messages      = 23;
         <p>Menaxho videot e fundit</p>
         </a>
 
-         <a href="matches_dashboard.php" class="manage-card">
+        <a href="matches_dashboard.php" class="manage-card">
         <h3>Matches</h3>
         <p>Menaxho rezultatet e lojës</p>
         </a>

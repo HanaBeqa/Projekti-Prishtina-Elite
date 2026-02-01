@@ -1,7 +1,7 @@
 <?php
 include_once "Database.php";
 
-class Match {
+class Matches {
     private $conn;
 
     public function __construct() {
