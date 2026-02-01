@@ -5,16 +5,16 @@ if(!isset($_SESSION['user']) || $_SESSION['role'] != 'admin'){
     exit;
 }
 
-include "Match.php";
-$matchObj = new Match();
+include "Matches.php";
+$matchesObj = new Matches();
 
 
 if(isset($_GET['delete'])){
-    $match = $matchObj->get($_GET['delete']);
+    $match = $matchesObj->get($_GET['delete']);
     if($match && file_exists($match['image_path'])){
         unlink($match['image_path']);
     }
-    $matchObj->delete($_GET['delete']);
+    $matchesObj->delete($_GET['delete']);
     header("Location: matches_dashboard.php");
     exit;
 }
@@ -36,19 +36,19 @@ if(isset($_POST['save'])){
     $match_date = $_POST['match_date'] ?? null;
 
     if($id){
-        $matchObj->update($id, $team_opponent, $image_path, $match_date);
+        $matchesObj->update($id, $team_opponent, $image_path, $match_date);
     } else {
-        $matchObj->add($team_opponent, $image_path, $match_date);
+        $matchesObj->add($team_opponent, $image_path, $match_date);
     }
     header("Location: matches_dashboard.php");
     exit;
 }
 
-$matches = $matchObj->getAll();
+$matches = $matchesObj->getAll();
 
 $edit = ['id'=>'','team_opponent'=>'','image_path'=>'','match_date'=>''];
 if(isset($_GET['edit'])){
-    $edit = $matchObj->get($_GET['edit']);
+    $edit = $matchesObj->get($_GET['edit']);
     if(!$edit) $edit = ['id'=>'','team_opponent'=>'','image_path'=>'','match_date'=>''];
 }
 ?>
