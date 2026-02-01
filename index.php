@@ -2,10 +2,6 @@
 include "Auth.php";
 $auth = new Auth();
 
-if ($auth->check() && !in_array($auth->role(), ['admin', 'user'])) {
-    header("Location: home.php");
-    exit;
-}
 
 if (isset($_GET['logout'])) {
     $auth->logout();

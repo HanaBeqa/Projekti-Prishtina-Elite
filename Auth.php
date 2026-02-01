@@ -26,20 +26,19 @@ class Auth {
         }
 
        
-        if($username == "user" && $password == "1234567"){
-            $_SESSION['user'] = $username;
-            $_SESSION['role'] = "user";
+        if(!empty($username) && !empty($password)){
+        $_SESSION['user'] = $username;
+        $_SESSION['role'] = "user";
 
-            if($remember){
-                setcookie("remember_user", $username, time()+86400, "/");
-                setcookie("remember_role", "user", time()+86400, "/");
-            }
-
-            return true; 
+        if($remember){
+            setcookie("remember_user", $username, time()+86400, "/");
+            setcookie("remember_role", "user", time()+86400, "/");
         }
-
-        return false; 
+        return true;
     }
+
+    return false;
+}
 
     public function check(){
         return isset($_SESSION['user']);
