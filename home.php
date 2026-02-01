@@ -3,6 +3,10 @@ include_once "Standing.php";
 
 $standingsObj = new Standing();
 $allStandings = $standingsObj->getAll();
+
+include_once "Video.php";
+$videoObj = new Video();
+$videos = $videoObj->getAll();
 ?>
 
 <!DOCTYPE html>
@@ -107,38 +111,20 @@ $allStandings = $standingsObj->getAll();
             </div>        
          </section>
 
-           <section class="videos-text">
-            <h2>Game videos</h2>
-             <div class="video-container">
-            <div id="video1">
-                <iframe src="https://www.youtube.com/embed/gBIJJAMID60?si=98nhecwaGKIxQ0QS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p>Finalja: Prishtina Elite vs Feronikeli!</p>
+          <section class="videos-text">
+    <h2>Game videos</h2>
+    <div class="video-container">
+        <?php foreach($videos as $v): ?>
+        <div class="next-video">
+            <iframe src="<?= htmlspecialchars($v['iframe_url']) ?>" title="<?= htmlspecialchars($v['title']) ?>" frameborder="0" allowfullscreen></iframe>
+            <div class="video-desc">
+                <p><?= htmlspecialchars($v['title']) ?></p>
+                <p><?= htmlspecialchars($v['description']) ?></p>
             </div>
-            <div class="other-videos">
-            <div class="next-video">
-                <iframe  src="https://www.youtube.com/embed/khMPglTBXqE?si=yNV2zhIyq3eWHis-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="video-desc">
-                <p>Voleyball . November 14.2025</p>   
-                <p>Prishtina Elite me nje tjeter fitore ndaj ekipit te fundit ne tabele Kv Klina!</p>
-                </div>
-            </div>
-            <div class="next-video">
-                <iframe  src="https://www.youtube.com/embed/YypSYAohgIQ?si=ohnsxocqaijPZWyu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="video-desc" >
-                <p>Voleyball . November 2.2025</p>   
-                <p>Prishtina Elite me nje fitore te veshtire ndaj Kastriotit!</p>
-                </div>
-            </div>
-            <div class="next-video">
-                <iframe  src="https://www.youtube.com/embed/VlQI8wIj0pY?si=-6QP1j6tUftWVBKv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="video-desc">
-                <p>Voleyball . October 26.2025</p>
-                <p>Prishtina Elite fiton ne Mitrovice, nje fitore e rendesishme qe i pozicionon ne fillim te tabeles! </p>
-                </div>
-            </div>
-            </div>
-            </div>
-        </section>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</section>
 
 
 

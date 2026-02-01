@@ -98,6 +98,11 @@ $messages      = 23;
         <p>Menaxho posterat e fundit</p>
         </a>
 
+        <a href="videoss_dashboard.php" class="manage-card">
+        <h3>Videos</h3>
+        <p>Menaxho videot e fundit</p>
+        </a>
+
     </section>
 
 </div>
