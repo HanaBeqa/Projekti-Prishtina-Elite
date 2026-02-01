@@ -16,7 +16,7 @@ class Matches {
     }
 
     public function getAll() {
-        $stmt = $this->conn->query("SELECT * FROM matches ORDER BY match_date DESC");
+        $stmt = $this->conn->query("SELECT * FROM matches ORDER BY match_date ASC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
