@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
         if ($auth->role() === "admin") {
             header("Location: main_dashboard.php");
         } else {
-            header("Location: home.html");
+            header("Location: home.php");
         }
         exit;
     } else {
@@ -26,7 +26,7 @@ if ($auth->check()) {
     if ($auth->role() === "admin") {
         header("Location: main_dashboard.php");
     } else {
-        header("Location: home.html");
+        header("Location: home.php");
     }
     exit;
 }
