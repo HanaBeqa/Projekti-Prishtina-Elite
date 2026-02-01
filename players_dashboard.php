@@ -40,8 +40,8 @@ $players = $player->getAll();
 </head>
 <body>
 
-<h2>Players CRUD</h2>
-<a href="main_dashboard.php">Back</a>
+<h2>Players Dashboard</h2>
+<a href="main_dashboard.php" id="back-link">Back to main dashboard</a>
 
 <table>
 <tr>
