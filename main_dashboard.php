@@ -113,10 +113,6 @@ $messages      = 23;
         <p>Menaxho aktivitetet e fundit</p>
         </a>
 
-        <a href="Users_dashboard.php" class="manage-card">
-        <h3>Users</h3>
-        <p>Menaxho përdoruesit</p>
-        </a>
 
 
     </section>
