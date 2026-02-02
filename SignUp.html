@@ -23,23 +23,24 @@
         <button class="active" type="button">Sign Up</button>
     </div>
 
-   <form class="form login" method="POST" action="signup.php">
-    <div class="emailPassword">
-        <label>Name</label>
-        <input type="text" id="name" name="username" required>
+    <form class="form login">
+        
 
-        <label>Email</label>
-        <input type="email" id="email" name="email">
+        <div class="emailPassword">
+            <label>Name</label>
+            <input type="text" id="name">
 
-        <label>Password</label>
-        <input type="password" id="password" name="password" required>
+            <label>Email</label>
+            <input type="email" id="email">
 
-        <label>Confirm Password</label>
-        <input type="password" id="confirmPassword" required>
-    </div>
-    <button class="submit" type="submit">Sign Up</button>
-</form>
+            <label>Password</label>
+            <input type="password" id="password">
 
+            <label>Confirm Password</label>
+            <input type="password" id="confirmPassword">
+        </div>
+        <button class="submit" id="submit">Sign Up</button>
+    </form>
 
 </div>
 <div class="foto1">
@@ -104,6 +105,10 @@
         confirmPassword.style.border = "2px solid green";
     }
 
+        if(valid){
+            
+            window.location.href = "home.php";
+        }
     };
 </script>
 </body>
