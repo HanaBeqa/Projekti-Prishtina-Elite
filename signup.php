@@ -1,110 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="SignInStyle.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="llogo.jpg" alt="Prishtina Elite logo">
-        </div>
-        <p class="shkrim">Log in to see more about Prishtina Elite !</p>
-    </nav>
+<?php
+require_once "Auth.php";
+$auth = new Auth();
 
-    <div class="background-overlay">
-    <div class="auth-box">
+if($_SERVER['REQUEST_METHOD'] === "POST"){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-    <div class="switch">
-        <button id="loginBtn" type="button">Log In</button>
-        <button class="active" type="button">Sign Up</button>
-    </div>
-
-   <form class="form login" method="POST" action="signupBack.php">
-    <div class="emailPassword">
-        <label>Name</label>
-        <input type="text" id="name" name="username" required>
-
-        <label>Email</label>
-        <input type="email" id="email" name="email">
-
-        <label>Password</label>
-        <input type="password" id="password" name="password" required>
-
-        <label>Confirm Password</label>
-        <input type="password" id="confirmPassword" required>
-    </div>
-    <button class="submit" type="submit">Sign Up</button>
-</form>
-
-
-</div>
-<div class="foto1">
-<img  src="IMG_1210.jpeg" alt="Background Image">
-</div>
-    
-</div>
-<script>
- document.getElementById("loginBtn").onclick = function () {
-        window.location.href = "index.php";
-    };
-
-    
-    document.getElementById("submit").onclick = function (event) {
-        event.preventDefault(); 
-
-       
-        let name = document.getElementById("name");
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
-        let confirmPassword = document.getElementById("confirmPassword");
-
-        let valid = true;
-
-       
-        if (name.value === "") {
-            name.style.border = "2px solid red";
-            name.placeholder = "Please fill this field";
-            valid = false;
-        } else {
-            name.style.border ="2px solid green";
-        }
-
-
-        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-    if (email.value.trim() === "" || !emailRegex.test(email.value.trim())) {
-        email.style.border = "2px solid red";
-        email.value = "";
-        email.placeholder = "Enter a valid email!";
-        valid = false;
+    if($auth->register($username, $password)){
+        header("Location: index.php"); 
+        exit;
     } else {
-        email.style.border = "2px solid green";
-       }
-
-
-        let passwordRegex = /^.{6,}$/;
-    if (password.value.trim() === "" || !passwordRegex.test(password.value.trim())) {
-        password.style.border = "2px solid red";
-        password.value = "";
-        password.placeholder = "Password must be at least 6 characters!";
-        valid = false;
-    } else {
-        password.style.border = "2px solid green";
-        }
-
-    if (confirmPassword.value.trim() === "" || confirmPassword.value.trim() !== password.value.trim()) {
-        confirmPassword.style.border = "2px solid red";
-        confirmPassword.value = "";
-        confirmPassword.placeholder = "Passwords do not match!";
-        valid = false;
-    } else {
-        confirmPassword.style.border = "2px solid green";
+        echo "Username ekziston!";
     }
-
-    };
-</script>
-</body>
-</html>
+}
