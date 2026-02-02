@@ -1,6 +1,9 @@
 <?php
+
+ include "Database.php";
+
 class Auth {
-    include "Database.php";
+    
 
     public function __construct() {
         session_start();
