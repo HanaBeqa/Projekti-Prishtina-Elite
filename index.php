@@ -95,7 +95,7 @@ if ($auth->check()) {
 <script>
     
     document.getElementById("signupBtn").onclick = function () {
-        window.location.href = "SignUp.html";
+        window.location.href = "SignUp.php";
     };
 
    
