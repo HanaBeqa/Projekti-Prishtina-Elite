@@ -1,7 +1,10 @@
 <?php
 class Auth {
+    include "Database.php";
+
     public function __construct() {
         session_start();
+        $this->db = new Database();
 
         
         if(!isset($_SESSION['user']) && isset($_COOKIE['remember_user'])){
@@ -22,6 +25,7 @@ class Auth {
                 setcookie("remember_role", "admin", time()+86400, "/");
             }
 
+            $this->saveLogin($username, "admin");
             return true; 
         }
 
@@ -34,11 +38,21 @@ class Auth {
             setcookie("remember_user", $username, time()+86400, "/");
             setcookie("remember_role", "user", time()+86400, "/");
         }
+
+        $this->saveLogin($username, "user");
         return true;
     }
 
     return false;
 }
+
+private function saveLogin($username, $role){
+        $conn = $this->db->getConnection();
+        $stmt = $conn->prepare("INSERT INTO logins (username, role, login_time) VALUES (:username, :role, NOW())");
+        $stmt->bindParam(":username", $username);
+        $stmt->bindParam(":role", $role);
+        $stmt->execute();
+    }
 
     public function check(){
         return isset($_SESSION['user']);
