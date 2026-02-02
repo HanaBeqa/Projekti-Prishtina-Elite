@@ -12,12 +12,12 @@ class Users {
 
 
     public function getAll() {
-        $stmt = $this->conn->query("SELECT id, username, role, created_at FROM users ORDER BY id ASC");
+        $stmt = $this->conn->query("SELECT id, username, role, created_at FROM logins ORDER BY id ASC");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function get($id) {
-        $stmt = $this->conn->prepare("SELECT id, username, role FROM users WHERE id=?");
+        $stmt = $this->conn->prepare("SELECT id, username, role FROM logins WHERE id=?");
         $stmt->execute([$id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -25,7 +25,7 @@ class Users {
     
 
     public function delete($id) {
-        $stmt = $this->conn->prepare("DELETE FROM users WHERE id=?");
+        $stmt = $this->conn->prepare("DELETE FROM logins WHERE id=?");
         return $stmt->execute([$id]);
     }
 }
