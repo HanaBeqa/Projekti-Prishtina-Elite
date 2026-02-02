@@ -2,6 +2,10 @@
 include "Auth.php";
 $auth = new Auth();
 
+if ($auth->check() && !in_array($auth->role(), ['admin', 'user'])) {
+    header("Location: home.php");
+    exit;
+}
 
 if (isset($_GET['logout'])) {
     $auth->logout();
@@ -95,7 +99,7 @@ if ($auth->check()) {
     };
 
    
-    document.querySelector("form").addEventListener("submit", function (event) {
+    document.querySelector("form").addEventListener("submit", function (event) ){
 
     let username = document.getElementById("username");
     let password = document.getElementById("password");
@@ -128,7 +132,7 @@ if ($auth->check()) {
 
 
    
-});
+};
 </script>
 
 </body>
