@@ -10,11 +10,6 @@ class Users {
         $this->conn->exec("set names utf8");
     }
 
-    public function add($username, $password, $role = 'user') {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $this->conn->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
-        return $stmt->execute([$username, $hashedPassword, $role]);
-    }
 
     public function getAll() {
         $stmt = $this->conn->query("SELECT id, username, role, created_at FROM users ORDER BY id ASC");
@@ -27,16 +22,7 @@ class Users {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function update($id, $username, $password = null, $role = 'user') {
-        if($password){
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $this->conn->prepare("UPDATE users SET username=?, password=?, role=? WHERE id=?");
-            return $stmt->execute([$username, $hashedPassword, $role, $id]);
-        } else {
-            $stmt = $this->conn->prepare("UPDATE users SET username=?, role=? WHERE id=?");
-            return $stmt->execute([$username, $role, $id]);
-        }
-    }
+    
 
     public function delete($id) {
         $stmt = $this->conn->prepare("DELETE FROM users WHERE id=?");
