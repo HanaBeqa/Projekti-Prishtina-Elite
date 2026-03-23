@@ -109,10 +109,7 @@ Prishtina Elite is known for developing young talents and local players, without
         <p>Voleyball . June 27.2025</p>
         <p>The preparations of Prishtina Elite for the upcoming Durres Camp</p>
       </div>
-      </div>
-    </section>
-
-    <section class="container-news">
+      
       <div class="news">
         <iframe src="https://www.youtube.com/embed/K-xxezfvGSg?si=k9zC4JWfdnKreJFq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>Voleyball . October 22.2023</p>
@@ -133,8 +130,10 @@ Prishtina Elite is known for developing young talents and local players, without
         <p>Voleyball . February 22.2024</p>
         <p>Prishtina Elite with a lot of success</p>
       </div>
-
+      </div>
     </section>
+
+    
 <section class="volley-map-section">
 
     <h1>Voleyball Schools in the City</h1>
